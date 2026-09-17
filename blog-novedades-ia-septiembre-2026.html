@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Docs, Google Home y el fin de las herramientas aisladas: qué significa para tu empresa — PrismIA</title>
+<meta name="description" content="Anthropic fusiona Claude y lanza Docs y Slides, Google abre su hogar a agentes externos y llega un modelo que no escribe texto. Analizamos qué tienen en común estas novedades de septiembre de 2026 y qué cambia de verdad para una pyme.">
+<link rel="canonical" href="https://www.getprismia.com/blog-novedades-ia-septiembre-2026.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Claude Docs, Google Home y el fin de las herramientas aisladas: qué significa para tu empresa">
+<meta property="og:description" content="Cuatro novedades de IA de esta semana apuntan a lo mismo: la interoperabilidad. Qué cambia de verdad para una pyme y qué es ruido.">
+<meta property="og:url" content="https://www.getprismia.com/blog-novedades-ia-septiembre-2026.html">
+<meta property="og:locale" content="es_ES">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Claude Docs, Google Home y el fin de las herramientas aisladas: qué significa para tu empresa",
+  "description": "Análisis de las novedades de IA de septiembre de 2026 (One Claude, Google Home MCP, Jev de TypeSafe AI) y su impacto real en la automatización de procesos de una pyme.",
+  "datePublished": "2026-09-17",
+  "dateModified": "2026-09-17",
+  "author": { "@type": "Person", "name": "Miriam Terol", "alternateName": "Mirtercast" },
+  "publisher": { "@type": "Organization", "name": "PrismIA", "url": "https://www.getprismia.com/" },
+  "inLanguage": "es-ES",
+  "mainEntityOfPage": "https://www.getprismia.com/blog-novedades-ia-septiembre-2026.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué es MCP y por qué importa para una empresa?",
+      "acceptedAnswer": { "@type": "Answer", "text": "MCP (Model Context Protocol) es un estándar abierto que define cómo un asistente de IA descubre y usa herramientas externas. Presentado por Anthropic en noviembre de 2024 y cedido después a la Agentic AI Foundation, permite que un agente se conecte a cualquier sistema que lo soporte sin necesidad de construir una integración a medida para cada uno. Para una empresa significa menos dependencia de un único proveedor y menos coste de conexión entre herramientas." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Claude Docs y Slides sustituyen a Google Workspace u Office?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Hoy no. Son herramientas en fase beta que generan documentos y presentaciones dentro de la conversación, con exportación a Word, Google Docs, PowerPoint o PDF. Resuelven bien el primer borrador, pero no sustituyen la edición colaborativa avanzada ni la gestión documental de una suite ofimática completa." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Existe un modelo de IA que no alucine?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No en el sentido que sugieren los titulares. El modelo Jev de TypeSafe AI garantiza que su respuesta siempre encaje en el formato y las opciones definidas por el desarrollador, lo que elimina los errores de formato. Pero puede elegir la opción incorrecta dentro de ese conjunto válido. Es ausencia de alucinación de formato, no garantía de acierto." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Debo cambiar mis herramientas por estas novedades?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Casi nunca. La lección de estas novedades es la contraria: la capa de interoperabilidad está madurando, así que cada vez es menos necesario migrar de herramienta para que los sistemas trabajen juntos. Conviene revisar los procesos antes que el catálogo de software." }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15151F; --navy-deep:#181826; --paper:#F6F5F2;
+    --gold:#F5A623; --gold-dark:#D98812; --teal:#14B8A6; --coral:#EC5C8D; --violet:#7C5CFC;
+    --cream-text:#F1EFFA; --line:rgba(18,32,58,0.14); --line-dark:rgba(237,233,222,0.16);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:-0.01em;margin:0 0 0.5em;}
+  a{color:inherit;}
+  .wrap{max-width:740px;margin:0 auto;padding:0 24px;}
+  header.site{background:var(--navy-deep);border-bottom:1px solid var(--line-dark);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1120px;margin:0 auto;}
+  .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--cream-text);font-size:1.1rem;text-decoration:none;display:flex;align-items:center;gap:8px;}
+  .brand-logo{height:48px;width:auto;display:block;}
+  nav.links{display:flex;gap:22px;}
+  nav.links a{color:#fff;text-decoration:none;font-size:0.92rem;opacity:0.92;}
+  @media (max-width:640px){ nav.links{display:none;} }
+  article{padding:64px 0 40px;}
+  .accent-bar{height:4px;background:var(--teal);border-radius:2px;width:56px;margin-bottom:22px;}
+  .eyebrow{font-size:0.85rem;opacity:0.6;margin-bottom:10px;}
+  h1.title{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;margin-bottom:10px;}
+  .meta{font-size:0.85rem;opacity:0.55;margin-bottom:26px;}
+  p{margin:0 0 1.15em;font-size:1.02rem;}
+  h2{font-size:1.35rem;margin-top:38px;}
+  h3{font-size:1.1rem;margin-top:24px;}
+  ul,ol{padding-left:22px;margin:0 0 1.4em;}
+  li{margin-bottom:10px;}
+  table{width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95rem;}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{font-family:'Space Grotesk',sans-serif;font-weight:600;}
+  .callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:0 18px 18px 0;padding:18px 22px;margin:26px 0;}
+  .callout.warn{border-left-color:var(--coral);}
+  .callout.gold{border-left-color:var(--gold);}
+  .article-img{width:100%;height:auto;display:block;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 10px;margin:8px 0 12px;}
+  .img-caption{font-size:0.82rem;opacity:0.6;text-align:center;margin:0 0 30px;}
+  .cta-box{margin-top:44px;padding:26px;border-radius:18px;background:#fff;border:1px solid var(--line);}
+  .cta-box a{display:inline-block;margin-top:12px;background:var(--gold);color:#fff;font-weight:600;padding:12px 22px;border-radius:999px;text-decoration:none;}
+  .related{margin-top:40px;padding-top:26px;border-top:1px solid var(--line);}
+  .related a{display:block;margin-top:10px;font-weight:600;text-decoration:none;color:var(--violet);}
+  .toc{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 32px;}
+  .toc p{font-family:'Space Grotesk',sans-serif;font-weight:600;margin:0 0 10px;font-size:0.95rem;}
+  .toc ol{margin:0;padding-left:20px;}
+  .toc li{margin-bottom:6px;font-size:0.94rem;}
+  .toc a{text-decoration:none;opacity:0.85;}
+  .toc a:hover{opacity:1;color:var(--violet);}
+  .news-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px;margin:20px 0;position:relative;overflow:hidden;}
+  .news-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--teal);}
+  .news-card.c2::before{background:var(--gold);}
+  .news-card.c3::before{background:var(--violet);}
+  .news-card.c4::before{background:var(--coral);}
+  .news-tag{font-size:0.74rem;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;opacity:0.55;}
+  .news-card h3{margin:8px 0 10px;font-size:1.12rem;}
+  .news-card p:last-child{margin-bottom:0;}
+  .verdict{font-size:0.88rem;font-weight:600;margin-top:14px;padding-top:14px;border-top:1px solid var(--line);}
+  .disclaimer{font-size:0.84rem;opacity:0.65;border-top:1px solid var(--line);padding-top:18px;margin-top:34px;}
+  footer{background:var(--navy-deep);color:var(--cream-text);padding:34px 0;margin-top:40px;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:0.85rem;opacity:0.75;}
+  footer a{text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="index.html" class="brand"><img src="logo-prismia.png" alt="PrismIA" class="brand-logo"></a>
+    <nav class="links">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="inmobiliarias.html">Inmobiliarias</a>
+      <a href="index.html#diagnostico">Diagnóstico</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="wrap">
+    <div class="accent-bar"></div>
+    <p class="eyebrow">Análisis · Novedades del sector</p>
+    <h1 class="title">Claude Docs, Google Home y el fin de las herramientas aisladas</h1>
+    <p class="meta">17 de septiembre de 2026 · Lectura de 12 minutos</p>
+
+    <svg class="article-img" viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama comparativo: a la izquierda, integraciones a medida uno a uno entre herramientas; a la derecha, todas las herramientas conectadas a través de una capa estándar MCP">
+      <text x="30" y="24" font-family="Space Grotesk" font-size="12" font-weight="600" fill="#EC5C8D">ANTES · integración a medida</text>
+      <circle cx="60" cy="70" r="16" fill="none" stroke="#15151F" stroke-width="1.4" opacity="0.6"/>
+      <circle cx="150" cy="60" r="16" fill="none" stroke="#15151F" stroke-width="1.4" opacity="0.6"/>
+      <circle cx="240" cy="80" r="16" fill="none" stroke="#15151F" stroke-width="1.4" opacity="0.6"/>
+      <circle cx="90" cy="160" r="16" fill="none" stroke="#15151F" stroke-width="1.4" opacity="0.6"/>
+      <circle cx="200" cy="170" r="16" fill="none" stroke="#15151F" stroke-width="1.4" opacity="0.6"/>
+      <g stroke="#EC5C8D" stroke-width="1.1" opacity="0.65">
+        <line x1="74" y1="78" x2="136" y2="66"/>
+        <line x1="164" y1="66" x2="226" y2="74"/>
+        <line x1="70" y1="84" x2="84" y2="144"/>
+        <line x1="104" y1="154" x2="186" y2="166"/>
+        <line x1="148" y1="76" x2="96" y2="146"/>
+        <line x1="156" y1="74" x2="194" y2="156"/>
+        <line x1="232" y1="94" x2="212" y2="156"/>
+        <line x1="74" y1="62" x2="228" y2="72"/>
+      </g>
+      <text x="56" y="214" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.65">Cada conexión, un desarrollo</text>
+      <text x="80" y="230" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.65">propio que mantener</text>
+
+      <line x1="310" y1="30" x2="310" y2="230" stroke="#15151F" stroke-width="1" opacity="0.15" stroke-dasharray="4 5"/>
+
+      <text x="356" y="24" font-family="Space Grotesk" font-size="12" font-weight="600" fill="#14B8A6">AHORA · capa estándar</text>
+      <rect x="420" y="105" width="118" height="42" rx="21" fill="#14B8A6" opacity="0.16" stroke="#14B8A6" stroke-width="1.6"/>
+      <text x="455" y="131" font-family="Space Grotesk" font-size="14" font-weight="700" fill="#14B8A6">MCP</text>
+      <circle cx="380" cy="60" r="15" fill="none" stroke="#15151F" stroke-width="1.4" opacity="0.6"/>
+      <circle cx="380" cy="126" r="15" fill="none" stroke="#15151F" stroke-width="1.4" opacity="0.6"/>
+      <circle cx="380" cy="192" r="15" fill="none" stroke="#15151F" stroke-width="1.4" opacity="0.6"/>
+      <circle cx="580" cy="60" r="15" fill="none" stroke="#15151F" stroke-width="1.4" opacity="0.6"/>
+      <circle cx="580" cy="126" r="15" fill="none" stroke="#15151F" stroke-width="1.4" opacity="0.6"/>
+      <circle cx="580" cy="192" r="15" fill="none" stroke="#15151F" stroke-width="1.4" opacity="0.6"/>
+      <g stroke="#14B8A6" stroke-width="1.5">
+        <line x1="395" y1="66" x2="428" y2="108"/>
+        <line x1="395" y1="126" x2="418" y2="126"/>
+        <line x1="395" y1="186" x2="428" y2="145"/>
+        <line x1="540" y1="108" x2="565" y2="66"/>
+        <line x1="540" y1="126" x2="565" y2="126"/>
+        <line x1="540" y1="145" x2="565" y2="186"/>
+      </g>
+      <text x="380" y="230" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.65">Una interfaz común para todo</text>
+    </svg>
+    <p class="img-caption">El cambio de fondo de 2026: pasar de construir una integración por cada pareja de herramientas a hablar todos el mismo idioma.</p>
+
+    <p>Esta semana han coincidido cuatro noticias que, leídas por separado, parecen el ruido habitual del sector: una app que se fusiona con otra, un termostato que ahora entiende órdenes de un chatbot, un modelo que promete no equivocarse y un debate recurrente sobre si la IA nos va a destruir.</p>
+
+    <p>Leídas juntas, cuentan algo bastante más interesante. Y tiene poco que ver con qué modelo es más listo.</p>
+
+    <div class="toc">
+      <p>Lo que vas a encontrar</p>
+      <ol>
+        <li><a href="#claude">Anthropic fusiona Claude y lanza Docs y Slides</a></li>
+        <li><a href="#google">Google abre tu casa a cualquier agente de IA</a></li>
+        <li><a href="#jev">El modelo "que no alucina": qué dice la letra pequeña</a></li>
+        <li><a href="#openai">OpenAI publica su marco para detectar comportamientos indebidos</a></li>
+        <li><a href="#patron">El patrón que conecta las cuatro noticias</a></li>
+        <li><a href="#empresa">Qué significa esto para una pyme que quiere automatizar</a></li>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
+      </ol>
+    </div>
+
+    <h2 id="claude">1. Anthropic fusiona Claude y lanza Docs y Slides</h2>
+
+    <div class="news-card">
+      <span class="news-tag">16 de septiembre de 2026</span>
+      <h3>"One Claude": desaparece la separación entre chat y agente</h3>
+      <p>Anthropic ha eliminado la distinción entre su chat conversacional y Claude Cowork, su modo agéntico. Ahora es una sola interfaz en la que el propio sistema decide si una petición se resuelve con una respuesta rápida o requiere un flujo de trabajo largo. Junto a la fusión llegan en beta <strong>Claude Docs</strong> y <strong>Claude Slides</strong>, que generan documentos y presentaciones dentro de la propia conversación, exportables a Word, Google Docs, PowerPoint o PDF, además de la integración de Claude Design en cualquier chat.</p>
+      <p>El despliegue empezó ese mismo día para los planes Pro y Max en web, escritorio y móvil, con varias semanas de despliegue progresivo; los planes Team y gratuito llegan después. Otro cambio relevante: las tareas siguen ejecutándose en la nube aunque cierres el portátil.</p>
+      <p class="verdict">Nuestra lectura: el titular fácil es "ataque a Google Workspace". El movimiento real es otro — reconocer que el usuario no debería tener que saber qué producto interno le corresponde a su tarea.</p>
+    </div>
+
+    <p>Hay una frase de Anthropic en el anuncio que explica mejor la decisión que cualquier análisis técnico: la gente usaba ambos productos, y lo frustrante era tener que decidir dónde encajaba cada tarea.</p>
+
+    <p>Eso es, literalmente, un problema de diseño de proceso. No de modelo, no de capacidad, no de potencia de cálculo. Durante dos años la industria ha competido en quién tenía el modelo más inteligente, y resulta que buena parte de la fricción del usuario estaba en algo mucho más mundano: en cuántas decisiones tiene que tomar antes de poder trabajar.</p>
+
+    <h2 id="google">2. Google abre tu casa a cualquier agente de IA</h2>
+
+    <div class="news-card c2">
+      <span class="news-tag">16 de septiembre de 2026</span>
+      <h3>Google Home MCP: control de dispositivos desde asistentes externos</h3>
+      <p>Google ha lanzado en acceso anticipado un servidor MCP para su ecosistema Google Home. Permite que agentes de terceros —Claude, ChatGPT, Hermes, OpenClaw o el propio Antigravity de Google— consulten el estado de los dispositivos, revisen el historial de eventos, analicen resúmenes de cámaras y ejecuten acciones sobre luces, termostatos y enchufes, sin pasar por la app de Google Home.</p>
+      <p>El acceso anticipado está limitado a Estados Unidos, en inglés y para suscriptores de Google Home Premium Advanced, y requiere configurar un proyecto de Google Cloud. Google no ha aclarado si se extenderá al resto de planes.</p>
+      <p class="verdict">Nuestra lectura: lo llamativo no es domótica. Es que Google elige un estándar abierto ajeno — creado por un competidor directo — en lugar de cerrar su ecosistema.</p>
+    </div>
+
+    <p>Detengámonos aquí, porque es más significativo de lo que parece. El Model Context Protocol lo presentó <strong>Anthropic</strong> en noviembre de 2024 y posteriormente lo cedió a la Agentic AI Foundation, bajo el paraguas de la Linux Foundation. Que Google lo adopte para su hogar conectado significa que la guerra por ser "el asistente" está dando paso a otra cosa: la carrera por ser <em>la capa de infraestructura</em> sobre la que funcionan todos los asistentes.</p>
+
+    <h2 id="jev">3. El modelo "que no alucina": qué dice la letra pequeña</h2>
+
+    <div class="news-card c3">
+      <span class="news-tag">15 de septiembre de 2026</span>
+      <h3>Jev, de TypeSafe AI: una IA que decide en lugar de escribir</h3>
+      <p>Diogo Almeida —coautor de InstructGPT en OpenAI, el trabajo que sentó las bases de ChatGPT— ha salido de dos años de sigilo con TypeSafe AI y su primer modelo, Jev. La propuesta es contraintuitiva: Jev <strong>no genera texto</strong>. Recibe información no estructurada y devuelve decisiones tipadas con una probabilidad asociada — una categoría de un conjunto cerrado, una puntuación, un sí/no.</p>
+      <p>Las cifras que reporta la compañía son llamativas: entre 20 y 200 veces más rápido que un modelo de frontera, entre 40 y 400 veces más barato, con respuestas de 70 a 500 milisegundos. Y una tasa de alucinación del 0%.</p>
+      <p class="verdict">Nuestra lectura: la cifra del 0% es cierta y engañosa a la vez. Merece explicación.</p>
+    </div>
+
+    <div class="callout warn">
+      <strong>El matiz que se pierde en los titulares:</strong> Jev no puede alucinar <em>de formato</em>. Si defines que la respuesta solo puede ser "bajo", "medio" o "alto", su arquitectura garantiza que jamás inventará una cuarta opción ni devolverá una estructura rota. Pero <strong>sí puede elegir la opción equivocada</strong> dentro del conjunto válido. Es decir: ausencia de error de formato, no garantía de acierto. Son dos cosas muy distintas, y la diferencia importa mucho si vas a construir algo encima.
+    </div>
+
+    <p>Dicho esto, la idea de fondo es genuinamente interesante y conecta con algo que vemos a diario. Almeida se pasó cuatro años haciéndose una pregunta incómoda: si los modelos llevan siendo superhumanos conversando desde hace años, ¿por qué la automatización real sigue costando tanto?</p>
+
+    <p>Su respuesta apunta a un problema muy reconocible. Un modelo de lenguaje puede explicarte perfectamente cómo procesar una factura. Pero si quieres que la procese de verdad dentro de un programa, alguien tiene que interpretar su salida, validarla, gestionar el caso en que se enrolla, el caso en que se niega y el caso en que se inventa un campo que no existe. Buena parte del trabajo de una automatización real no está en la inteligencia del modelo: está en domesticar su salida.</p>
+
+    <p>Las limitaciones de Jev son severas y su propio fabricante las publica con una honestidad poco habitual: no escribe código, no mantiene conversación, no acepta imágenes, tiene un contexto de unos 32.000 tokens y un máximo de 255 opciones por campo. No es un sustituto de nada de lo que usas hoy. Es una pieza especializada para un tipo concreto de tarea: clasificar, enrutar, puntuar y decidir en volumen.</p>
+
+    <h2 id="openai">4. OpenAI publica su marco para detectar comportamientos indebidos</h2>
+
+    <div class="news-card c4">
+      <span class="news-tag">Septiembre de 2026</span>
+      <h3>Criterios internos para detectar, documentar y reportar</h3>
+      <p>OpenAI ha hecho público un marco para identificar cuándo sus modelos se comportan de forma inadecuada, con criterios para detectarlo, documentarlo y reportarlo antes de que ese comportamiento llegue al usuario final.</p>
+      <p class="verdict">Nuestra lectura: la parte relevante para una empresa no es la política de OpenAI. Es la pregunta que te deja: ¿cómo detectas tú cuándo tu automatización se comporta mal?</p>
+    </div>
+
+    <p>Es fácil leer esto como una noticia que solo incumbe a los grandes laboratorios. Pero si tienes un sistema de IA respondiendo a tus clientes o clasificando tus leads, la pregunta te aplica exactamente igual, solo que a otra escala: <strong>¿tienes alguna forma de enterarte si empieza a hacerlo mal?</strong></p>
+
+    <p>En la mayoría de automatizaciones que revisamos, la respuesta honesta es que no. Funcionan hasta que alguien, por casualidad, detecta que llevan tres semanas clasificando mal un tipo de consulta. Eso no es un problema de IA: es un problema de no haber definido qué significa "funciona bien" antes de poner el sistema en marcha.</p>
+
+    <h2 id="patron">5. El patrón que conecta las cuatro noticias</h2>
+
+    <p>Ninguna de estas cuatro novedades habla de un modelo más inteligente. Ni una. Y esa es justamente la señal.</p>
+
+    <svg class="article-img" viewBox="0 0 640 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama: las cuatro noticias convergen en un mismo punto, la capa de interoperabilidad y proceso">
+      <rect x="20" y="24" width="150" height="40" rx="10" fill="none" stroke="#14B8A6" stroke-width="1.5"/>
+      <text x="34" y="42" font-family="IBM Plex Sans" font-size="10" fill="#15151F">Anthropic unifica su</text>
+      <text x="34" y="56" font-family="IBM Plex Sans" font-size="10" fill="#15151F">interfaz</text>
+
+      <rect x="20" y="78" width="150" height="40" rx="10" fill="none" stroke="#F5A623" stroke-width="1.5"/>
+      <text x="34" y="96" font-family="IBM Plex Sans" font-size="10" fill="#15151F">Google adopta un</text>
+      <text x="34" y="110" font-family="IBM Plex Sans" font-size="10" fill="#15151F">estándar abierto</text>
+
+      <rect x="20" y="132" width="150" height="40" rx="10" fill="none" stroke="#7C5CFC" stroke-width="1.5"/>
+      <text x="34" y="150" font-family="IBM Plex Sans" font-size="10" fill="#15151F">Jev fuerza salidas</text>
+      <text x="34" y="164" font-family="IBM Plex Sans" font-size="10" fill="#15151F">predecibles</text>
+
+      <rect x="20" y="186" width="150" height="40" rx="10" fill="none" stroke="#EC5C8D" stroke-width="1.5"/>
+      <text x="34" y="204" font-family="IBM Plex Sans" font-size="10" fill="#15151F">OpenAI define cómo</text>
+      <text x="34" y="218" font-family="IBM Plex Sans" font-size="10" fill="#15151F">detectar fallos</text>
+
+      <g stroke="#15151F" stroke-width="1.2" opacity="0.35" fill="none">
+        <path d="M170 44 C 250 44, 260 110, 330 118"/>
+        <path d="M170 98 C 250 98, 270 112, 330 120"/>
+        <path d="M170 152 C 250 152, 270 132, 330 124"/>
+        <path d="M170 206 C 250 206, 260 136, 330 126"/>
+      </g>
+
+      <circle cx="400" cy="122" r="58" fill="none" stroke="#14B8A6" stroke-width="2"/>
+      <text x="366" y="112" font-family="Space Grotesk" font-size="13" font-weight="700" fill="#14B8A6">PROCESO</text>
+      <text x="368" y="134" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.8">no capacidad</text>
+
+      <path d="M462 122 L512 122" stroke="#15151F" stroke-width="1.5" opacity="0.5"/>
+      <path d="M504 115 L514 122 L504 129" fill="none" stroke="#15151F" stroke-width="1.5" opacity="0.5"/>
+      <text x="522" y="112" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.8">Menos fricción</text>
+      <text x="522" y="128" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.8">Más resultados</text>
+      <text x="522" y="144" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.8">sin cambiar de modelo</text>
+    </svg>
+    <p class="img-caption">Cuatro anuncios distintos, un mismo desplazamiento: del músculo del modelo a cómo se conecta y se controla.</p>
+
+    <p>Míralas de nuevo, resumidas en una línea cada una:</p>
+
+    <table>
+      <tr><th>Noticia</th><th>De qué habla en realidad</th></tr>
+      <tr><td>One Claude, Docs y Slides</td><td>De reducir decisiones al usuario. Diseño de flujo.</td></tr>
+      <tr><td>Google Home MCP</td><td>De interoperabilidad entre sistemas de distintos fabricantes.</td></tr>
+      <tr><td>Jev de TypeSafe</td><td>De hacer la salida predecible para que un programa pueda consumirla.</td></tr>
+      <tr><td>Marco de OpenAI</td><td>De detectar y documentar cuándo el sistema falla.</td></tr>
+    </table>
+
+    <p>Conexión, previsibilidad, control y reducción de fricción. Son las cuatro preocupaciones clásicas de la <strong>gestión de procesos</strong>, no de la investigación en inteligencia artificial. Los laboratorios más avanzados del mundo están invirtiendo sus anuncios estrella en resolver problemas de integración y gobernanza, no de capacidad.</p>
+
+    <div class="callout">
+      La industria ha llegado al mismo sitio al que llega toda empresa que intenta automatizar en serio: <strong>el cuello de botella dejó de ser la inteligencia disponible hace tiempo.</strong> Ahora está en cómo se conectan las piezas y en cómo sabes que funcionan.
+    </div>
+
+    <h2 id="empresa">6. Qué significa esto para una pyme que quiere automatizar</h2>
+
+    <p>Traducido a decisiones concretas que puedes tomar este mes:</p>
+
+    <h3>Deja de esperar a "la herramienta definitiva"</h3>
+    <p>Mucha gente pospone automatizar porque intuye que en tres meses saldrá algo mejor. Y saldrá. Pero lo que estas noticias muestran es que la capa de conexión se está estandarizando, lo que significa justo lo contrario de lo que se suele concluir: <strong>cada vez importa menos qué herramienta concreta elijas</strong>, porque cada vez es más fácil cambiarla sin rehacer el proceso. Lo que no cambia, y sigue siendo tuyo, es el mapa de cómo trabaja tu empresa.</p>
+
+    <h3>Elige la pieza adecuada para cada tarea, no la más potente</h3>
+    <p>Jev es la demostración más clara. Para clasificar diez mil correos por prioridad no necesitas el modelo que mejor escribe poesía: necesitas uno rápido, barato y que devuelva siempre una de tus categorías. Usar un modelo de frontera para eso es como contratar a un arquitecto para montar una estantería. Funciona, pero pagas de más y esperas más.</p>
+
+    <h3>Define qué significa "funciona bien" antes de automatizar</h3>
+    <p>Si los laboratorios necesitan marcos formales para detectar cuándo sus modelos se desvían, tu automatización necesita al menos una versión mínima de lo mismo: qué métrica mirarías para saber que sigue haciendo su trabajo, cada cuánto la revisas y quién. Sin eso, un fallo silencioso puede durar meses.</p>
+
+    <h3>No migres de herramientas: conéctalas</h3>
+    <p>La noticia de Google Home es, en el fondo, la validación de una idea muy simple: es más inteligente hacer que los sistemas existentes hablen entre sí que sustituirlos todos por uno nuevo. Es exactamente lo que hacemos en cada proyecto, y no por ideología, sino porque migrar tiene un coste enorme — de dinero, de formación y de resistencia del equipo — que casi nunca compensa.</p>
+
+    <div class="callout gold">
+      <strong>Una forma sencilla de comprobarlo:</strong> coge el proceso que más tiempo os quita esta semana. Pregúntate si el problema es que ninguna herramienta puede hacerlo (raramente lo es) o que las herramientas que ya tenéis no se hablan entre sí y alguien hace de puente a mano. En nuestra experiencia, la segunda respuesta gana casi siempre.
+    </div>
+
+    <h2 id="faq">7. Preguntas frecuentes</h2>
+
+    <h3>¿Qué es MCP y por qué debería importarme?</h3>
+    <p>Es un estándar abierto que define cómo un asistente de IA descubre y usa herramientas externas. Lo presentó Anthropic en noviembre de 2024 y después lo cedió a la Agentic AI Foundation. Para tu empresa significa menos dependencia de un proveedor concreto y menos coste cada vez que quieras conectar dos sistemas.</p>
+
+    <h3>¿Claude Docs y Slides sustituyen a Google Workspace u Office?</h3>
+    <p>Hoy no. Están en beta, resuelven muy bien el primer borrador y exportan a los formatos habituales, pero no cubren la edición colaborativa avanzada ni la gestión documental completa de una suite ofimática.</p>
+
+    <h3>¿Entonces existe ya un modelo que no alucine?</h3>
+    <p>No en el sentido que sugieren los titulares. Jev garantiza que su respuesta siempre encaje en el formato y las opciones que hayas definido, lo que elimina los errores de estructura. Pero puede elegir la opción equivocada dentro de las válidas. Es fiabilidad de formato, no de criterio.</p>
+
+    <h3>¿Debería cambiar mis herramientas por todo esto?</h3>
+    <p>Casi nunca. La conclusión práctica es la contraria: con la capa de interoperabilidad madurando, cada vez hace menos falta migrar para que los sistemas trabajen juntos. Revisa el proceso antes que el catálogo de software.</p>
+
+    <h3>¿Y el debate sobre el riesgo existencial de la IA?</h3>
+    <p>Es un debate legítimo y con gente seria en ambos lados, pero opera en una escala temporal y de decisión que no es la de una pyme. Tu decisión de esta semana no es si la IA amenaza a la humanidad: es si sigues copiando datos a mano entre dos sistemas que podrían hablarse solos.</p>
+
+    <div class="cta-box">
+      <p style="margin:0;font-weight:600;">¿Tus herramientas se hablan entre sí o alguien hace de puente a mano?</p>
+      <p style="margin:6px 0 0;font-size:0.95rem;opacity:0.8;">Nuestro diagnóstico gratuito mapea tus procesos reales, calcula cuánto cuestan hoy y te dice qué conviene conectar primero — sin cambiar las herramientas que ya usáis.</p>
+      <a href="index.html#diagnostico">Hacer diagnóstico gratuito</a>
+    </div>
+
+    <p class="disclaimer"><strong>Nota:</strong> este artículo recoge anuncios publicados entre el 15 y el 17 de septiembre de 2026 y refleja la información disponible en esa fecha. Las cifras de rendimiento de Jev son las declaradas por TypeSafe AI y no han sido verificadas de forma independiente. Las funciones en acceso anticipado o beta pueden cambiar, y su disponibilidad varía según plan y país.</p>
+
+    <div class="related">
+      <p style="font-weight:600;margin:0;">Sigue leyendo</p>
+      <a href="blog-ai-act-pymes-espana.html">Usas IA en tu empresa: esto es lo que la ley te obliga a hacer desde agosto</a>
+      <a href="blog-itil-scrum-automatizacion.html">ITIL, Scrum y automatización con IA: por qué el orden importa</a>
+      <a href="blog-proceso-listo-para-automatizar.html">¿Cómo saber si un proceso está listo para automatizarse?</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> PrismIA — Dirigida por Mirtercast</span>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

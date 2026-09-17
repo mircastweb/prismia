@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ITIL, Scrum y automatización con IA: por qué el orden importa — PrismIA</title>
+<meta name="description" content="Por qué aplicar metodología de gestión de proyectos (ITIL, Scrum) antes de automatizar con IA evita el error más común de las empresas al digitalizar procesos.">
+<link rel="canonical" href="https://www.prismia.com/blog-itil-scrum-automatizacion.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15151F; --navy-deep:#181826; --paper:#F6F5F2;
+    --gold:#F5A623; --gold-dark:#D98812; --teal:#14B8A6; --coral:#EC5C8D; --violet:#7C5CFC;
+    --cream-text:#F1EFFA; --line:rgba(18,32,58,0.14); --line-dark:rgba(237,233,222,0.16);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:-0.01em;margin:0 0 0.5em;}
+  a{color:inherit;}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+  header.site{background:var(--navy-deep);border-bottom:1px solid var(--line-dark);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1120px;margin:0 auto;}
+  .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--cream-text);font-size:1.1rem;text-decoration:none;display:flex;align-items:center;gap:8px;}
+  .brand span{color:var(--gold);}
+  .brand-logo{height:48px;width:auto;display:block;}
+  nav.links{display:flex;gap:22px;}
+  nav.links a{color:var(--cream-text);text-decoration:none;font-size:0.92rem;opacity:0.85;}
+  @media (max-width:640px){ nav.links{display:none;} }
+  article{padding:64px 0 40px;}
+  .accent-bar{height:4px;background:var(--violet);border-radius:2px;width:56px;margin-bottom:22px;}
+  .eyebrow{font-size:0.85rem;opacity:0.6;margin-bottom:10px;}
+  h1.title{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;margin-bottom:18px;}
+  p{margin:0 0 1.15em;font-size:1.02rem;}
+  blockquote{
+    margin:26px 0;padding:20px 24px;border-left:3px solid var(--violet);
+    background:#fff;border-radius:0 6px 6px 0;font-style:normal;font-size:1.02rem;
+  }
+  .cta-box{margin-top:44px;padding:26px;border-radius:18px;background:#fff;border:1px solid var(--line);}
+  .article-img{width:100%;height:auto;display:block;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 6px;margin:8px 0 30px;}
+  .cta-box a{display:inline-block;margin-top:12px;background:var(--gold);color:var(--navy-deep);font-weight:600;padding:12px 22px;border-radius:999px;text-decoration:none;}
+  footer{background:var(--navy-deep);color:var(--cream-text);padding:34px 0;margin-top:40px;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:0.85rem;opacity:0.75;}
+  footer a{text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="index.html" class="brand"><img src="logo-prismia.png" alt="PrismIA" class="brand-logo"></a>
+    <nav class="links">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="index.html#diagnostico">Diagnóstico</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="wrap">
+    <div class="accent-bar"></div>
+    <p class="eyebrow">Artículo · Metodología</p>
+    <h1 class="title">ITIL, Scrum y automatización con IA: por qué el orden importa</h1>
+
+    <svg class="article-img" viewBox="0 0 640 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama: ITIL, Scrum e IA se combinan en un proceso ordenado antes de automatizar">
+      <circle cx="230" cy="95" r="55" fill="none" stroke="#F5A623" stroke-width="1.6" opacity="0.85"/>
+      <circle cx="290" cy="95" r="55" fill="none" stroke="#7C5CFC" stroke-width="1.6" opacity="0.85"/>
+      <circle cx="260" cy="145" r="55" fill="none" stroke="#14B8A6" stroke-width="1.6" opacity="0.85"/>
+      <text x="178" y="65" font-family="IBM Plex Sans" font-size="12" fill="#15151F">ITIL</text>
+      <text x="300" y="65" font-family="IBM Plex Sans" font-size="12" fill="#15151F">Scrum</text>
+      <text x="235" y="185" font-family="IBM Plex Sans" font-size="12" fill="#15151F">IA</text>
+      <line x1="345" y1="120" x2="450" y2="120" stroke="#15151F" stroke-width="1.6"/>
+      <path d="M440 112 L451 120 L440 128" fill="none" stroke="#15151F" stroke-width="1.6"/>
+      <circle cx="500" cy="120" r="26" fill="none" stroke="#15151F" stroke-width="1.8"/>
+      <path d="M488 120 L497 129 L514 108" fill="none" stroke="#15151F" stroke-width="2.2"/>
+      <text x="455" y="165" font-family="IBM Plex Sans" font-size="11" fill="#15151F">Proceso ordenado</text>
+    </svg>
+
+    <p>Antes de automatizar nada, pasé años coordinando proyectos IT: plazos, equipos, procesos que había que ordenar antes de que se pudieran mejorar. Esa experiencia, no la IA en sí, es la que más influye en cómo trabajamos aquí.</p>
+
+    <blockquote>Automatizar un proceso desordenado no lo arregla. Simplemente hace que el desorden llegue más rápido a más gente.</blockquote>
+
+    <p>ITIL enseña a gestionar servicios pensando en el ciclo de vida completo, no solo en el momento en que algo se rompe. Scrum enseña a avanzar en iteraciones cortas, con feedback real en cada una, en vez de construir a ciegas durante meses. Ninguna de las dos metodologías tiene que ver directamente con inteligencia artificial, pero ambas tienen que ver con no automatizar sin entender primero qué se está automatizando.</p>
+
+    <h2 style="font-size:1.3rem;margin-top:32px;">Lo que cambia al aplicar esto a la automatización</h2>
+    <p>En la práctica, significa que antes de tocar cualquier herramienta hacemos lo mismo que haríamos al empezar un proyecto de gestión de servicios: mapear el proceso real, identificar quién depende de él, y definir qué significa "funciona bien" antes de construir nada.</p>
+    <p>Y significa entregar en fases cortas, como en Scrum: un primer quick win que se pueda medir en semanas, no un proyecto de automatización total que tarda meses en dar la primera señal de si funciona o no.</p>
+
+    <p>La IA generativa y las herramientas de automatización han hecho que construir algo sea más rápido que nunca. Precisamente por eso, la parte que marca la diferencia ya no es la tecnología: es saber qué merece la pena construir primero.</p>
+
+    <div class="cta-box">
+      <p style="margin:0;font-weight:600;">¿Empezamos por diagnosticar tu proceso?</p>
+      <p style="margin:6px 0 0;font-size:0.95rem;opacity:0.8;">Sin construir nada todavía. Solo para ver claro qué automatizar primero.</p>
+      <a href="index.html#diagnostico">Hacer diagnóstico gratuito</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> PrismIA — Dirigida por Mirtercast</span>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

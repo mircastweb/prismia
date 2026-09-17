@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatización de reporting y gestión de proyectos con IA — PrismIA</title>
+<meta name="description" content="Cómo automatizar el reporting y el seguimiento de proyectos con IA para detectar retrasos a tiempo, con dashboards y alertas que se actualizan solos.">
+<link rel="canonical" href="https://www.prismia.com/blog-automatizacion-reporting-proyectos-ia.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15151F; --navy-deep:#181826; --paper:#F6F5F2;
+    --gold:#F5A623; --gold-dark:#D98812; --teal:#14B8A6; --coral:#EC5C8D; --violet:#7C5CFC;
+    --cream-text:#F1EFFA; --line:rgba(18,32,58,0.14); --line-dark:rgba(237,233,222,0.16);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:-0.01em;margin:0 0 0.5em;}
+  a{color:inherit;}
+  .wrap{max-width:740px;margin:0 auto;padding:0 24px;}
+  header.site{background:var(--navy-deep);border-bottom:1px solid var(--line-dark);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1120px;margin:0 auto;}
+  .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--cream-text);font-size:1.1rem;text-decoration:none;display:flex;align-items:center;gap:8px;}
+  .brand span{color:var(--gold);}
+  .brand-logo{height:48px;width:auto;display:block;}
+  nav.links{display:flex;gap:22px;}
+  nav.links a{color:var(--cream-text);text-decoration:none;font-size:0.92rem;opacity:0.85;}
+  @media (max-width:640px){ nav.links{display:none;} }
+  article{padding:64px 0 40px;}
+  .accent-bar{height:4px;background:var(--coral);border-radius:2px;width:56px;margin-bottom:22px;}
+  .eyebrow{font-size:0.85rem;opacity:0.6;margin-bottom:10px;}
+  h1.title{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;margin-bottom:10px;}
+  .meta{font-size:0.85rem;opacity:0.55;margin-bottom:26px;}
+  p{margin:0 0 1.15em;font-size:1.02rem;}
+  h2{font-size:1.35rem;margin-top:38px;}
+  h3{font-size:1.1rem;margin-top:24px;}
+  ul,ol{padding-left:22px;margin:0 0 1.4em;}
+  li{margin-bottom:10px;}
+  table{width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95rem;}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);}
+  th{font-family:'Space Grotesk',sans-serif;font-weight:600;}
+  .callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--coral);border-radius:0 6px 6px 0;padding:18px 22px;margin:26px 0;}
+  .article-img{width:100%;height:auto;display:block;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 6px;margin:8px 0 30px;}
+  .cta-box{margin-top:44px;padding:26px;border-radius:18px;background:#fff;border:1px solid var(--line);}
+  .cta-box a{display:inline-block;margin-top:12px;background:var(--gold);color:var(--navy-deep);font-weight:600;padding:12px 22px;border-radius:999px;text-decoration:none;}
+  .related{margin-top:40px;padding-top:26px;border-top:1px solid var(--line);}
+  .related a{display:block;margin-top:10px;font-weight:600;text-decoration:none;color:var(--violet);}
+  footer{background:var(--navy-deep);color:var(--cream-text);padding:34px 0;margin-top:40px;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:0.85rem;opacity:0.75;}
+  footer a{text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="index.html" class="brand"><img src="logo-prismia.png" alt="PrismIA" class="brand-logo"></a>
+    <nav class="links">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="index.html#diagnostico">Diagnóstico</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="wrap">
+    <div class="accent-bar"></div>
+    <p class="eyebrow">Guía · Reporting y proyectos</p>
+    <h1 class="title">Automatización de reporting y gestión de proyectos con IA</h1>
+    <p class="meta">Actualizado 2026 · Lectura de 8 minutos</p>
+
+    <svg class="article-img" viewBox="0 0 640 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama: tareas dispersas convergen en un panel unificado que genera alertas automáticas">
+      <rect x="30" y="30" width="18" height="18" fill="#15151F" opacity="0.5"/>
+      <rect x="30" y="70" width="18" height="18" fill="#15151F" opacity="0.5"/>
+      <rect x="30" y="110" width="18" height="18" fill="#15151F" opacity="0.5"/>
+      <rect x="30" y="150" width="18" height="18" fill="#15151F" opacity="0.5"/>
+      <line x1="48" y1="39" x2="230" y2="95" stroke="#7C5CFC" stroke-width="1.3"/>
+      <line x1="48" y1="79" x2="230" y2="95" stroke="#7C5CFC" stroke-width="1.3"/>
+      <line x1="48" y1="119" x2="230" y2="95" stroke="#7C5CFC" stroke-width="1.3"/>
+      <line x1="48" y1="159" x2="230" y2="95" stroke="#7C5CFC" stroke-width="1.3"/>
+      <text x="14" y="185" font-family="IBM Plex Sans" font-size="11" fill="#15151F">Tareas dispersas</text>
+      <circle cx="260" cy="95" r="32" fill="none" stroke="#7C5CFC" stroke-width="1.8"/>
+      <text x="215" y="145" font-family="IBM Plex Sans" font-size="11" fill="#15151F">Panel unificado</text>
+      <line x1="292" y1="95" x2="400" y2="95" stroke="#EC5C8D" stroke-width="1.6"/>
+      <path d="M420 75 a18 18 0 1 1 -0.1 0 M430 95 l10 20 h-20 z" fill="none" stroke="#EC5C8D" stroke-width="1.6"/>
+      <text x="395" y="145" font-family="IBM Plex Sans" font-size="11" fill="#15151F">Alerta automática</text>
+    </svg>
+
+    <p>La mayoría de retrasos en un proyecto no se detectan cuando empiezan, se detectan cuando ya es tarde para corregirlos sin coste. La automatización de reporting con IA no elimina los problemas, pero hace que se vean en el momento en que todavía se pueden arreglar.</p>
+
+    <h2>El problema real no es la falta de datos, es la falta de visibilidad</h2>
+    <p>La mayoría de empresas ya tienen los datos de sus proyectos en algún sitio: una herramienta de gestión de tareas, un Excel compartido, el email. El problema es que nadie los mira todos juntos hasta que llega el momento de preparar un informe, normalmente una vez a la semana o una vez al mes. Entre medias, los problemas crecen en silencio.</p>
+
+    <h2>Qué se automatiza en reporting y proyectos</h2>
+    <ul>
+      <li><b>Dashboards que se actualizan solos</b>, sin que alguien tenga que copiar datos de una herramienta a una presentación cada semana.</li>
+      <li><b>Alertas automáticas</b> cuando una tarea lleva más tiempo del previsto sin moverse, o cuando una fecha límite está en riesgo.</li>
+      <li><b>Resúmenes generados con IA</b> del estado general del proyecto, en lenguaje natural, listos para compartir sin tener que redactarlos desde cero.</li>
+      <li><b>Notificaciones dirigidas</b>: cada persona recibe solo lo que le afecta, en vez de un informe genérico que nadie lee entero.</li>
+    </ul>
+
+    <div class="callout">
+      <b>La clave de gestión de proyectos aplicada aquí:</b> no se trata de generar más informes, se trata de que el problema llegue a la persona correcta en el momento en que todavía puede actuar, no en la reunión de la semana siguiente.
+    </div>
+
+    <h2>Cómo se implementa</h2>
+    <ol>
+      <li><b>Se conecta la herramienta de gestión de tareas</b> (Asana, Trello, Jira o incluso una hoja de cálculo estructurada) como fuente de datos.</li>
+      <li><b>Se definen las condiciones de alerta</b>: qué se considera "retraso", qué prioridad tiene cada tipo de aviso.</li>
+      <li><b>Se genera el dashboard automático</b>, accesible para quien lo necesite, actualizado en tiempo real.</li>
+      <li><b>Se activan las notificaciones</b> a las personas concretas que deben actuar sobre cada alerta.</li>
+    </ol>
+
+    <h2>Cuánto tiempo se recupera con esto</h2>
+    <p>Si vuestro equipo dedica hoy varias horas a la semana a preparar manualmente el informe de estado, ese tiempo se libera casi por completo. Pero el ahorro mayor no siempre es el tiempo: es evitar que un retraso pequeño se convierta en un problema grande porque nadie lo vio a tiempo.</p>
+
+    <table>
+      <tr><th>Horas/semana en informes manuales</th><th>Personas que necesitan visibilidad</th><th>Prioridad</th></tr>
+      <tr><td>Menos de 2h</td><td>1-2</td><td>Baja</td></tr>
+      <tr><td>2-5h</td><td>3-10</td><td>Media-alta</td></tr>
+      <tr><td>Más de 5h</td><td>Más de 10</td><td>Alta</td></tr>
+    </table>
+
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿Necesitamos cambiar nuestra herramienta de gestión de proyectos?</h3>
+    <p>No, la automatización se conecta a la que ya usáis, incluso si hoy es una hoja de cálculo bien estructurada.</p>
+    <h3>¿Esto sustituye las reuniones de seguimiento?</h3>
+    <p>No las sustituye, pero las hace mucho más cortas y útiles, porque todo el mundo llega con la misma información ya actualizada, sin tener que repasarla en la reunión.</p>
+    <h3>¿Funciona igual para un equipo de 5 personas que para uno de 50?</h3>
+    <p>El principio es el mismo, pero cuantas más personas necesiten visibilidad, mayor es el impacto de automatizarlo, porque hoy esa información probablemente se está duplicando en varias conversaciones distintas.</p>
+
+    <div class="cta-box">
+      <p style="margin:0;font-weight:600;">¿Cuánto tiempo dedicáis hoy a preparar informes a mano?</p>
+      <p style="margin:6px 0 0;font-size:0.95rem;opacity:0.8;">El diagnóstico gratuito calcula el coste real de este proceso y qué automatizar primero.</p>
+      <a href="index.html#diagnostico">Hacer diagnóstico gratuito</a>
+    </div>
+
+    <div class="related">
+      <p style="font-weight:600;margin:0;">Sigue leyendo</p>
+      <a href="blog-itil-scrum-automatizacion.html">ITIL, Scrum y automatización con IA: por qué el orden importa</a>
+      <a href="blog-automatizacion-documentos-administracion-ia.html">Automatización de facturas y documentos con IA</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> PrismIA — Dirigida por Mirtercast</span>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

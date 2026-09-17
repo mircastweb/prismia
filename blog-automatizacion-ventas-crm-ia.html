@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatización de ventas y CRM con IA: deja de perder leads — PrismIA</title>
+<meta name="description" content="Cómo automatizar el seguimiento de leads y el CRM con IA para no perder oportunidades de venta: qué automatizar, errores frecuentes y cómo calcular el impacto.">
+<link rel="canonical" href="https://www.prismia.com/blog-automatizacion-ventas-crm-ia.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15151F; --navy-deep:#181826; --paper:#F6F5F2;
+    --gold:#F5A623; --gold-dark:#D98812; --teal:#14B8A6; --coral:#EC5C8D; --violet:#7C5CFC;
+    --cream-text:#F1EFFA; --line:rgba(18,32,58,0.14); --line-dark:rgba(237,233,222,0.16);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:-0.01em;margin:0 0 0.5em;}
+  a{color:inherit;}
+  .wrap{max-width:740px;margin:0 auto;padding:0 24px;}
+  header.site{background:var(--navy-deep);border-bottom:1px solid var(--line-dark);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1120px;margin:0 auto;}
+  .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--cream-text);font-size:1.1rem;text-decoration:none;display:flex;align-items:center;gap:8px;}
+  .brand span{color:var(--gold);}
+  .brand-logo{height:48px;width:auto;display:block;}
+  nav.links{display:flex;gap:22px;}
+  nav.links a{color:var(--cream-text);text-decoration:none;font-size:0.92rem;opacity:0.85;}
+  @media (max-width:640px){ nav.links{display:none;} }
+  article{padding:64px 0 40px;}
+  .accent-bar{height:4px;background:var(--gold);border-radius:2px;width:56px;margin-bottom:22px;}
+  .eyebrow{font-size:0.85rem;opacity:0.6;margin-bottom:10px;}
+  h1.title{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;margin-bottom:10px;}
+  .meta{font-size:0.85rem;opacity:0.55;margin-bottom:26px;}
+  p{margin:0 0 1.15em;font-size:1.02rem;}
+  h2{font-size:1.35rem;margin-top:38px;}
+  h3{font-size:1.1rem;margin-top:24px;}
+  ul,ol{padding-left:22px;margin:0 0 1.4em;}
+  li{margin-bottom:10px;}
+  table{width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95rem;}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);}
+  th{font-family:'Space Grotesk',sans-serif;font-weight:600;}
+  .callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:0 6px 6px 0;padding:18px 22px;margin:26px 0;}
+  .article-img{width:100%;height:auto;display:block;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 6px;margin:8px 0 30px;}
+  .cta-box{margin-top:44px;padding:26px;border-radius:18px;background:#fff;border:1px solid var(--line);}
+  .cta-box a{display:inline-block;margin-top:12px;background:var(--gold);color:var(--navy-deep);font-weight:600;padding:12px 22px;border-radius:999px;text-decoration:none;}
+  .related{margin-top:40px;padding-top:26px;border-top:1px solid var(--line);}
+  .related a{display:block;margin-top:10px;font-weight:600;text-decoration:none;color:var(--violet);}
+  footer{background:var(--navy-deep);color:var(--cream-text);padding:34px 0;margin-top:40px;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:0.85rem;opacity:0.75;}
+  footer a{text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="index.html" class="brand"><img src="logo-prismia.png" alt="PrismIA" class="brand-logo"></a>
+    <nav class="links">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="index.html#diagnostico">Diagnóstico</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="wrap">
+    <div class="accent-bar"></div>
+    <p class="eyebrow">Guía · Ventas y CRM</p>
+    <h1 class="title">Automatización de ventas y CRM con IA: deja de perder leads</h1>
+    <p class="meta">Actualizado 2026 · Lectura de 8 minutos</p>
+
+    <svg class="article-img" viewBox="0 0 640 170" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama: un lead entra, se cualifica con IA, recibe seguimiento automático y se convierte en venta cerrada">
+      <circle cx="50" cy="85" r="9" fill="#15151F"/>
+      <text x="22" y="115" font-family="IBM Plex Sans" font-size="11" fill="#15151F">Lead nuevo</text>
+      <line x1="59" y1="85" x2="150" y2="85" stroke="#F5A623" stroke-width="1.6"/>
+      <circle cx="180" cy="85" r="26" fill="none" stroke="#F5A623" stroke-width="1.8"/>
+      <text x="140" y="130" font-family="IBM Plex Sans" font-size="11" fill="#15151F">Cualificación IA</text>
+      <line x1="206" y1="85" x2="300" y2="85" stroke="#EC5C8D" stroke-width="1.6"/>
+      <circle cx="330" cy="85" r="26" fill="none" stroke="#EC5C8D" stroke-width="1.8"/>
+      <text x="285" y="130" font-family="IBM Plex Sans" font-size="11" fill="#15151F">Seguimiento automático</text>
+      <line x1="356" y1="85" x2="450" y2="85" stroke="#14B8A6" stroke-width="1.6"/>
+      <circle cx="480" cy="85" r="26" fill="none" stroke="#14B8A6" stroke-width="1.8"/>
+      <path d="M468 85 L477 94 L494 76" fill="none" stroke="#14B8A6" stroke-width="2"/>
+      <text x="448" y="130" font-family="IBM Plex Sans" font-size="11" fill="#15151F">Venta cerrada</text>
+    </svg>
+
+    <p>La mayoría de leads no se pierden porque el producto no interese. Se pierden porque nadie los contactó a tiempo, porque se quedaron en una hoja de Excel que nadie revisó esa semana, o porque el seguimiento dependía de que una persona se acordara de hacerlo. La automatización de ventas con IA existe precisamente para cerrar esa fuga.</p>
+
+    <h2>Los tres puntos donde se pierden más leads</h2>
+    <ul>
+      <li><b>El primer contacto tarda demasiado.</b> Los estudios de respuesta comercial coinciden en algo simple: cuanto más tarda una empresa en responder a un lead nuevo, menos probabilidades hay de cerrarlo. Si tarda más de un día, la ventana ya se ha reducido mucho.</li>
+      <li><b>No hay seguimiento a los que no responden a la primera.</b> La mayoría de ventas no se cierran en el primer contacto, se cierran en el tercero o cuarto. Sin un sistema, esos siguientes contactos dependen de la memoria de alguien.</li>
+      <li><b>La información vive repartida</b> entre el email, el móvil personal del comercial y una hoja de cálculo desactualizada, así que nadie tiene una visión real del embudo.</li>
+    </ul>
+
+    <h2>Qué se automatiza con IA en un proceso de ventas</h2>
+    <ol>
+      <li><b>Cualificación inicial del lead</b>: la IA puede leer el mensaje o formulario de entrada y clasificar automáticamente el interés, el presupuesto aproximado o la urgencia.</li>
+      <li><b>Primer contacto inmediato</b>: una respuesta automática personalizada en minutos, no en días, incluso fuera de horario comercial.</li>
+      <li><b>Secuencias de seguimiento</b> que se activan solas si el lead no responde, con el tono y el contenido adaptados a cuánto tiempo ha pasado.</li>
+      <li><b>Generación de propuestas</b> a partir de plantillas conectadas a los datos del lead, sin que el comercial tenga que redactarlas desde cero cada vez.</li>
+      <li><b>Alertas de leads en riesgo</b>: avisos automáticos cuando una oportunidad lleva demasiado tiempo sin movimiento.</li>
+    </ol>
+
+    <div class="callout">
+      <b>Lo que la IA no debería automatizar:</b> la negociación final y la relación de confianza con el cliente. El objetivo es que el comercial llegue a esa conversación con más tiempo y mejor información, no que desaparezca de la ecuación.
+    </div>
+
+    <h2>Cómo calcular el impacto en tu empresa</h2>
+    <p>Si entran 80 leads al mes y hoy tardáis una media de 3 días en el primer contacto, con un cierre estimado del 8%, automatizar el primer contacto a minutos en vez de días puede subir esa tasa de cierre de forma medible, sin gastar un euro más en captación. La automatización de ventas no trae más leads: hace que se aprovechen mejor los que ya estás pagando por conseguir.</p>
+
+    <table>
+      <tr><th>Situación actual</th><th>Riesgo</th></tr>
+      <tr><td>Leads en Excel o email, sin CRM</td><td>Alto — se pierden sin visibilidad</td></tr>
+      <tr><td>CRM pero seguimiento manual</td><td>Medio — depende de la disciplina del equipo</td></tr>
+      <tr><td>CRM con automatización de seguimiento</td><td>Bajo — el sistema no olvida</td></tr>
+    </table>
+
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿Necesito cambiar de CRM para automatizar esto?</h3>
+    <p>Casi nunca. La automatización se conecta al CRM que ya usáis; cambiar de herramienta solo tiene sentido si el problema es la propia herramienta, no el proceso.</p>
+    <h3>¿Esto sustituye al equipo comercial?</h3>
+    <p>No. Automatiza el trabajo mecánico de seguimiento para que el equipo dedique su tiempo a las conversaciones que realmente cierran ventas.</p>
+    <h3>¿Cuánto tarda en verse resultado?</h3>
+    <p>El primer contacto automatizado suele implementarse en pocas semanas; el impacto en la tasa de cierre se empieza a medir con claridad en 1-2 meses de datos.</p>
+
+    <div class="cta-box">
+      <p style="margin:0;font-weight:600;">¿Cuántos leads se os están escapando ahora mismo?</p>
+      <p style="margin:6px 0 0;font-size:0.95rem;opacity:0.8;">El diagnóstico gratuito estima el coste real de vuestro proceso de ventas actual.</p>
+      <a href="index.html#diagnostico">Hacer diagnóstico gratuito</a>
+    </div>
+
+    <div class="related">
+      <p style="font-weight:600;margin:0;">Sigue leyendo</p>
+      <a href="blog-automatizacion-atencion-cliente-ia.html">Automatización de atención al cliente con IA: guía completa</a>
+      <a href="blog-itil-scrum-automatizacion.html">ITIL, Scrum y automatización con IA: por qué el orden importa</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> PrismIA — Dirigida por Mirtercast</span>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

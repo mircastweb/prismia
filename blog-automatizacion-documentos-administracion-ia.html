@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatización de facturas y documentos con IA: guía para digitalizar tu administración — PrismIA</title>
+<meta name="description" content="Cómo automatizar la generación de facturas, contratos y propuestas con IA: qué procesos digitalizar primero, errores comunes y cómo medir el ahorro real.">
+<link rel="canonical" href="https://www.prismia.com/blog-automatizacion-documentos-administracion-ia.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15151F; --navy-deep:#181826; --paper:#F6F5F2;
+    --gold:#F5A623; --gold-dark:#D98812; --teal:#14B8A6; --coral:#EC5C8D; --violet:#7C5CFC;
+    --cream-text:#F1EFFA; --line:rgba(18,32,58,0.14); --line-dark:rgba(237,233,222,0.16);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:-0.01em;margin:0 0 0.5em;}
+  a{color:inherit;}
+  .wrap{max-width:740px;margin:0 auto;padding:0 24px;}
+  header.site{background:var(--navy-deep);border-bottom:1px solid var(--line-dark);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1120px;margin:0 auto;}
+  .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--cream-text);font-size:1.1rem;text-decoration:none;display:flex;align-items:center;gap:8px;}
+  .brand span{color:var(--gold);}
+  .brand-logo{height:48px;width:auto;display:block;}
+  nav.links{display:flex;gap:22px;}
+  nav.links a{color:var(--cream-text);text-decoration:none;font-size:0.92rem;opacity:0.85;}
+  @media (max-width:640px){ nav.links{display:none;} }
+  article{padding:64px 0 40px;}
+  .accent-bar{height:4px;background:var(--violet);border-radius:2px;width:56px;margin-bottom:22px;}
+  .eyebrow{font-size:0.85rem;opacity:0.6;margin-bottom:10px;}
+  h1.title{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;margin-bottom:10px;}
+  .meta{font-size:0.85rem;opacity:0.55;margin-bottom:26px;}
+  p{margin:0 0 1.15em;font-size:1.02rem;}
+  h2{font-size:1.35rem;margin-top:38px;}
+  h3{font-size:1.1rem;margin-top:24px;}
+  ul,ol{padding-left:22px;margin:0 0 1.4em;}
+  li{margin-bottom:10px;}
+  table{width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95rem;}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);}
+  th{font-family:'Space Grotesk',sans-serif;font-weight:600;}
+  .callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--violet);border-radius:0 6px 6px 0;padding:18px 22px;margin:26px 0;}
+  .article-img{width:100%;height:auto;display:block;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 6px;margin:8px 0 30px;}
+  .cta-box{margin-top:44px;padding:26px;border-radius:18px;background:#fff;border:1px solid var(--line);}
+  .cta-box a{display:inline-block;margin-top:12px;background:var(--gold);color:var(--navy-deep);font-weight:600;padding:12px 22px;border-radius:999px;text-decoration:none;}
+  .related{margin-top:40px;padding-top:26px;border-top:1px solid var(--line);}
+  .related a{display:block;margin-top:10px;font-weight:600;text-decoration:none;color:var(--violet);}
+  footer{background:var(--navy-deep);color:var(--cream-text);padding:34px 0;margin-top:40px;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:0.85rem;opacity:0.75;}
+  footer a{text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="index.html" class="brand"><img src="logo-prismia.png" alt="PrismIA" class="brand-logo"></a>
+    <nav class="links">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="index.html#diagnostico">Diagnóstico</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="wrap">
+    <div class="accent-bar"></div>
+    <p class="eyebrow">Guía · Administración y documentos</p>
+    <h1 class="title">Automatización de facturas y documentos con IA: guía para digitalizar tu administración</h1>
+    <p class="meta">Actualizado 2026 · Lectura de 9 minutos</p>
+
+    <svg class="article-img" viewBox="0 0 640 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama: los datos entran, una plantilla con IA genera el documento y se envía o firma automáticamente">
+      <rect x="30" y="60" width="14" height="70" fill="#15151F"/>
+      <rect x="50" y="80" width="14" height="50" fill="#15151F" opacity="0.7"/>
+      <rect x="70" y="45" width="14" height="85" fill="#15151F" opacity="0.5"/>
+      <text x="24" y="150" font-family="IBM Plex Sans" font-size="11" fill="#15151F">Tus datos</text>
+      <line x1="95" y1="95" x2="200" y2="95" stroke="#7C5CFC" stroke-width="1.6"/>
+      <circle cx="230" cy="95" r="30" fill="none" stroke="#7C5CFC" stroke-width="1.8"/>
+      <text x="196" y="145" font-family="IBM Plex Sans" font-size="11" fill="#15151F">Plantilla + IA</text>
+      <line x1="260" y1="95" x2="360" y2="95" stroke="#EC5C8D" stroke-width="1.6"/>
+      <rect x="370" y="65" width="60" height="78" rx="4" fill="none" stroke="#EC5C8D" stroke-width="1.6"/>
+      <line x1="382" y1="82" x2="418" y2="82" stroke="#EC5C8D" stroke-width="1.4"/>
+      <line x1="382" y1="94" x2="418" y2="94" stroke="#EC5C8D" stroke-width="1.4"/>
+      <line x1="382" y1="106" x2="405" y2="106" stroke="#EC5C8D" stroke-width="1.4"/>
+      <line x1="440" y1="100" x2="520" y2="100" stroke="#14B8A6" stroke-width="1.6"/>
+      <circle cx="550" cy="100" r="8" fill="#14B8A6"/>
+      <text x="470" y="150" font-family="IBM Plex Sans" font-size="11" fill="#15151F">Enviado y firmado solo</text>
+    </svg>
+
+    <p>Cada factura, contrato o propuesta que se genera copiando y pegando datos de un sitio a otro es una oportunidad perdida de automatización. No hace falta un ERP nuevo ni un proyecto de meses: con IA generativa conectada a plantillas, la mayoría de documentos recurrentes de una empresa se pueden generar solos, listos para enviar.</p>
+
+    <h2>Qué documentos se automatizan primero (y por qué)</h2>
+    <p>No todos los documentos merecen la misma prioridad. El criterio es simple: cuanto más se repite un documento y más mecánico es rellenarlo, antes se recupera la inversión de automatizarlo.</p>
+    <ul>
+      <li><b>Facturas</b>: datos que ya existen en otro sistema (pedido, cliente, importe) y que hoy se transcriben a mano.</li>
+      <li><b>Presupuestos y propuestas comerciales</b>: mismo formato, mismos bloques, solo cambian cifras y nombre del cliente.</li>
+      <li><b>Contratos estándar</b>: cláusulas fijas con variables que cambian (nombre, fechas, importes).</li>
+      <li><b>Informes internos recurrentes</b>: los que se generan cada semana o cada mes con la misma estructura.</li>
+    </ul>
+
+    <h2>Cómo funciona en la práctica</h2>
+    <ol>
+      <li><b>Se define la plantilla</b> del documento, con las partes fijas y las variables que van a cambiar.</li>
+      <li><b>Se conecta a la fuente de datos</b>: un CRM, una hoja de cálculo, un formulario o un ERP.</li>
+      <li><b>La IA rellena y adapta el contenido</b> variable (por ejemplo, redactar una cláusula específica o resumir un pedido) sin intervención manual.</li>
+      <li><b>El documento se genera, se envía y, si hace falta firma, se enlaza directamente</b> con la herramienta de firma electrónica.</li>
+      <li><b>Todo queda archivado automáticamente</b> en la carpeta o sistema correcto, sin que nadie tenga que guardarlo a mano.</li>
+    </ol>
+
+    <div class="callout">
+      <b>El error más común:</b> automatizar la generación del documento pero dejar el envío y el archivo manuales. El ahorro real está en automatizar el proceso completo, de principio a fin, no solo el paso que más molesta.
+    </div>
+
+    <h2>Cuánto cuesta hoy no automatizarlo</h2>
+    <p>Toma el número de documentos que generáis a la semana, multiplícalo por el tiempo medio que se tarda en cada uno y por el coste/hora de quien lo hace. Multiplica ese resultado por 52 semanas. Ese es el coste anual de mantenerlo manual, sin contar el tiempo que se pierde corrigiendo errores cuando algo se ha copiado mal.</p>
+
+    <table>
+      <tr><th>Documentos/semana</th><th>Frecuencia de errores</th><th>Prioridad de automatizar</th></tr>
+      <tr><td>Menos de 10</td><td>Casi nunca</td><td>Baja</td></tr>
+      <tr><td>10-50</td><td>A veces</td><td>Media</td></tr>
+      <tr><td>Más de 50</td><td>Con frecuencia</td><td>Alta</td></tr>
+    </table>
+
+    <h2>Preguntas frecuentes</h2>
+    <h3>¿Es seguro automatizar documentos con datos sensibles?</h3>
+    <p>Sí, siempre que la automatización se construya conectando directamente con vuestras propias fuentes de datos y herramientas, sin exponer información a sistemas externos no controlados.</p>
+    <h3>¿Hace falta cambiar de ERP o sistema de facturación?</h3>
+    <p>Normalmente no. La automatización se integra con lo que ya usáis; cambiar de sistema solo tiene sentido si la herramienta actual es el propio problema.</p>
+    <h3>¿Qué pasa si un documento necesita revisión humana antes de enviarse?</h3>
+    <p>Se puede añadir un paso de aprobación: el documento se genera automáticamente y espera un visto bueno antes de salir, en los casos donde tiene sentido mantener ese control.</p>
+
+    <div class="cta-box">
+      <p style="margin:0;font-weight:600;">¿Cuánto os cuesta generar vuestros documentos a mano?</p>
+      <p style="margin:6px 0 0;font-size:0.95rem;opacity:0.8;">El diagnóstico gratuito calcula el coste anual real de este proceso en vuestra empresa.</p>
+      <a href="index.html#diagnostico">Hacer diagnóstico gratuito</a>
+    </div>
+
+    <div class="related">
+      <p style="font-weight:600;margin:0;">Sigue leyendo</p>
+      <a href="blog-coste-oculto-tareas-manuales.html">El coste oculto de las tareas manuales (y cómo calcularlo)</a>
+      <a href="blog-automatizacion-ventas-crm-ia.html">Automatización de ventas y CRM con IA: deja de perder leads</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> PrismIA — Dirigida por Mirtercast</span>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

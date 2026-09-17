@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Usas IA en tu empresa: esto es lo que la ley te obliga a hacer desde agosto — PrismIA</title>
+<meta name="description" content="Si tu empresa usa ChatGPT, un chatbot o genera contenido con IA, tienes obligaciones legales vigentes desde agosto de 2026. Qué te obliga la ley hoy, quién puede sancionarte de verdad y qué puedes ignorar.">
+<link rel="canonical" href="https://www.getprismia.com/blog-ai-act-pymes-espana.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Usas IA en tu empresa: esto es lo que la ley te obliga a hacer desde agosto">
+<meta property="og:description" content="Si tu empresa usa IA, ya tienes obligaciones legales. Qué aplica hoy, quién puede sancionarte de verdad y qué puedes ignorar.">
+<meta property="og:url" content="https://www.getprismia.com/blog-ai-act-pymes-espana.html">
+<meta property="og:locale" content="es_ES">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Usas IA en tu empresa: esto es lo que la ley te obliga a hacer desde agosto",
+  "description": "Guía práctica sobre las obligaciones del AI Act que ya aplican a las pymes españolas, quién puede sancionar hoy y cómo documentar las automatizaciones con IA.",
+  "datePublished": "2026-09-16",
+  "dateModified": "2026-09-16",
+  "author": { "@type": "Person", "name": "Miriam Terol", "alternateName": "Mirtercast" },
+  "publisher": { "@type": "Organization", "name": "PrismIA", "url": "https://www.getprismia.com/" },
+  "inLanguage": "es-ES",
+  "mainEntityOfPage": "https://www.getprismia.com/blog-ai-act-pymes-espana.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿El AI Act se aplica a las pymes o solo a grandes empresas?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Se aplica a cualquier empresa que desarrolle o use sistemas de IA, sin umbral mínimo de tamaño. Lo que cambia según el tamaño es la proporcionalidad: a una pyme con un uso básico de IA se le exige un plan razonable y documentado, no la misma estructura que a una multinacional." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Puede la AESIA multar hoy a mi empresa por el AI Act?",
+      "acceptedAnswer": { "@type": "Answer", "text": "En el momento de escribir esta guía, la ley orgánica española que tipifica las infracciones y atribuye competencias sancionadoras sigue en tramitación parlamentaria, por lo que el régimen sancionador nacional del AI Act aún no está plenamente desplegado. Eso no significa estar a salvo: por los mismos usos de IA puede sancionar hoy la AEPD por la vía del RGPD, la Inspección de Trabajo o las autoridades de consumo." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Un chatbot de atención al cliente obliga a algo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Sí. La obligación de transparencia implica que el usuario debe saber que está interactuando con un sistema de inteligencia artificial y no con una persona. Se resuelve con un aviso claro al inicio de la conversación y ofreciendo una vía para hablar con alguien del equipo." }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Automatizar procesos con IA me complica el cumplimiento normativo?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Al contrario, si se hace ordenadamente. Una automatización bien diseñada deja registro de qué hace el sistema, con qué datos y quién lo supervisa, que es exactamente la evidencia que pide la normativa. El problema no es automatizar, es hacerlo sin documentar." }
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15151F; --navy-deep:#181826; --paper:#F6F5F2;
+    --gold:#F5A623; --gold-dark:#D98812; --teal:#14B8A6; --coral:#EC5C8D; --violet:#7C5CFC;
+    --cream-text:#F1EFFA; --line:rgba(18,32,58,0.14); --line-dark:rgba(237,233,222,0.16);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:-0.01em;margin:0 0 0.5em;}
+  a{color:inherit;}
+  .wrap{max-width:740px;margin:0 auto;padding:0 24px;}
+  header.site{background:var(--navy-deep);border-bottom:1px solid var(--line-dark);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1120px;margin:0 auto;}
+  .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--cream-text);font-size:1.1rem;text-decoration:none;display:flex;align-items:center;gap:8px;}
+  .brand span{color:var(--gold);}
+  .brand-logo{height:48px;width:auto;display:block;}
+  nav.links{display:flex;gap:22px;}
+  nav.links a{color:var(--cream-text);text-decoration:none;font-size:0.92rem;opacity:0.85;}
+  @media (max-width:640px){ nav.links{display:none;} }
+  article{padding:64px 0 40px;}
+  .accent-bar{height:4px;background:var(--violet);border-radius:2px;width:56px;margin-bottom:22px;}
+  .eyebrow{font-size:0.85rem;opacity:0.6;margin-bottom:10px;}
+  h1.title{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;margin-bottom:10px;}
+  .meta{font-size:0.85rem;opacity:0.55;margin-bottom:26px;}
+  p{margin:0 0 1.15em;font-size:1.02rem;}
+  h2{font-size:1.35rem;margin-top:38px;}
+  h3{font-size:1.1rem;margin-top:24px;}
+  ul,ol{padding-left:22px;margin:0 0 1.4em;}
+  li{margin-bottom:10px;}
+  table{width:100%;border-collapse:collapse;margin:24px 0;font-size:0.95rem;}
+  th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+  th{font-family:'Space Grotesk',sans-serif;font-weight:600;}
+  .callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--violet);border-radius:0 18px 18px 0;padding:18px 22px;margin:26px 0;}
+  .callout.warn{border-left-color:var(--coral);}
+  .callout.ok{border-left-color:var(--teal);}
+  .article-img{width:100%;height:auto;display:block;background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px 10px;margin:8px 0 12px;}
+  .img-caption{font-size:0.82rem;opacity:0.6;text-align:center;margin:0 0 30px;}
+  .cta-box{margin-top:44px;padding:26px;border-radius:18px;background:#fff;border:1px solid var(--line);}
+  .cta-box a{display:inline-block;margin-top:12px;background:var(--gold);color:var(--navy-deep);font-weight:600;padding:12px 22px;border-radius:999px;text-decoration:none;}
+  .related{margin-top:40px;padding-top:26px;border-top:1px solid var(--line);}
+  .related a{display:block;margin-top:10px;font-weight:600;text-decoration:none;color:var(--violet);}
+  .toc{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 32px;}
+  .toc p{font-family:'Space Grotesk',sans-serif;font-weight:600;margin:0 0 10px;font-size:0.95rem;}
+  .toc ol{margin:0;padding-left:20px;}
+  .toc li{margin-bottom:6px;font-size:0.94rem;}
+  .toc a{text-decoration:none;opacity:0.85;}
+  .toc a:hover{opacity:1;color:var(--violet);}
+  .disclaimer{font-size:0.84rem;opacity:0.65;border-top:1px solid var(--line);padding-top:18px;margin-top:34px;}
+  footer{background:var(--navy-deep);color:var(--cream-text);padding:34px 0;margin-top:40px;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:0.85rem;opacity:0.75;}
+  footer a{text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="index.html" class="brand"><img src="logo-prismia.png" alt="PrismIA" class="brand-logo"></a>
+    <nav class="links">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="inmobiliarias.html">Inmobiliarias</a>
+      <a href="index.html#diagnostico">Diagnóstico</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="wrap">
+    <div class="accent-bar"></div>
+    <p class="eyebrow">Guía · Normativa y automatización</p>
+    <h1 class="title">Usas IA en tu empresa: esto es lo que la ley te obliga a hacer desde agosto</h1>
+    <p class="meta">Actualizado en septiembre de 2026 · Lectura de 11 minutos</p>
+
+    <svg class="article-img" viewBox="0 0 640 230" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Línea temporal del AI Act: febrero de 2025 prohibiciones y alfabetización, agosto de 2025 modelos de uso general, agosto de 2026 transparencia y alto riesgo, agosto de 2027 productos regulados">
+      <line x1="40" y1="120" x2="600" y2="120" stroke="#15151F" stroke-width="1.4" opacity="0.25"/>
+
+      <circle cx="95" cy="120" r="9" fill="#14B8A6"/>
+      <text x="60" y="152" font-family="Space Grotesk" font-size="12" font-weight="600" fill="#15151F">Feb 2025</text>
+      <text x="44" y="170" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.75">Prohibiciones</text>
+      <text x="40" y="184" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.75">+ alfabetización</text>
+
+      <circle cx="245" cy="120" r="9" fill="#F5A623"/>
+      <text x="212" y="98" font-family="Space Grotesk" font-size="12" font-weight="600" fill="#15151F">Ago 2025</text>
+      <text x="196" y="80" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.75">Modelos de uso</text>
+      <text x="212" y="66" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.75">general</text>
+
+      <circle cx="395" cy="120" r="14" fill="#EC5C8D"/>
+      <circle cx="395" cy="120" r="22" fill="none" stroke="#EC5C8D" stroke-width="1.6" opacity="0.45"/>
+      <text x="356" y="166" font-family="Space Grotesk" font-size="13" font-weight="700" fill="#EC5C8D">Ago 2026</text>
+      <text x="330" y="184" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.8">Transparencia del art. 50</text>
+      <text x="344" y="198" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.8">+ sistemas de alto riesgo</text>
+
+      <circle cx="545" cy="120" r="9" fill="#7C5CFC"/>
+      <text x="512" y="98" font-family="Space Grotesk" font-size="12" font-weight="600" fill="#15151F">Ago 2027</text>
+      <text x="486" y="80" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.75">Productos regulados</text>
+      <text x="498" y="66" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.75">(sanidad, máquinas)</text>
+
+      <rect x="373" y="26" width="46" height="18" rx="9" fill="#EC5C8D" opacity="0.14"/>
+      <text x="381" y="39" font-family="Space Grotesk" font-size="10" font-weight="600" fill="#EC5C8D">HOY</text>
+      <line x1="395" y1="44" x2="395" y2="98" stroke="#EC5C8D" stroke-width="1.2" stroke-dasharray="4 4"/>
+    </svg>
+    <p class="img-caption">Calendario de aplicación del Reglamento (UE) 2024/1689. La fecha que ya hemos pasado — agosto de 2026 — es la que más afecta al día a día de una pyme.</p>
+
+    <p>El 2 de agosto de 2026 pasó sin titulares en la mayoría de pymes españolas. Fue, sin embargo, la fecha en la que el Reglamento Europeo de Inteligencia Artificial entró en su fase más relevante para cualquier empresa que use IA en su operativa diaria: obligaciones de transparencia, etiquetado de contenido generado artificialmente y requisitos completos para los sistemas clasificados como de alto riesgo.</p>
+
+    <p>Si tu empresa tiene un chatbot en la web, genera textos o imágenes con IA, usa una herramienta que criba currículums o ha automatizado parte de su atención al cliente, esto te afecta. Y probablemente te afecta desde hace más tiempo del que crees.</p>
+
+    <div class="toc">
+      <p>Lo que vas a encontrar en esta guía</p>
+      <ol>
+        <li><a href="#que-aplica">Qué obliga ya hoy a una pyme española</a></li>
+        <li><a href="#quien-sanciona">Quién puede sancionarte realmente (y el matiz que casi nadie cuenta)</a></li>
+        <li><a href="#riesgo">Cómo clasificar tus herramientas por nivel de riesgo</a></li>
+        <li><a href="#shadow-ai">El problema silencioso: la IA que ya usa tu equipo sin que lo sepas</a></li>
+        <li><a href="#plan">Plan de cumplimiento realista para una pyme</a></li>
+        <li><a href="#automatizacion">Por qué automatizar bien te acerca al cumplimiento, no te aleja</a></li>
+        <li><a href="#faq">Preguntas frecuentes</a></li>
+      </ol>
+    </div>
+
+    <h2 id="que-aplica">1. Qué obliga ya hoy a una pyme española</h2>
+
+    <p>Conviene separar dos planos que se mezclan constantemente en los titulares. Por un lado está el <strong>AI Act europeo</strong>, el Reglamento (UE) 2024/1689, que es de aplicación directa: rige en España sin necesidad de que el Parlamento español apruebe nada. Por otro está el <strong>proyecto de ley orgánica española</strong>, que no crea obligaciones nuevas, sino que designa autoridades, regula procedimientos y concreta el régimen sancionador nacional.</p>
+
+    <p>Las obligaciones que hoy pesan sobre tu empresa vienen del primero. Y las tres que más afectan a una pyme normal son estas:</p>
+
+    <h3>Alfabetización en IA (vigente desde febrero de 2025)</h3>
+    <p>El artículo 4 del reglamento obliga a que las personas que usan sistemas de IA en tu empresa tengan un nivel suficiente de conocimiento sobre ellos: qué hacen, qué limitaciones tienen y cómo interpretar sus resultados. No exige un título ni un curso concreto, pero sí que puedas demostrar que has hecho algo. Lleva más de un año y medio vigente.</p>
+
+    <h3>Transparencia con el usuario (desde agosto de 2026)</h3>
+    <p>Si una persona interactúa con un sistema de IA, tiene derecho a saberlo. Esto afecta de lleno al chatbot de tu web, a las respuestas automáticas de WhatsApp y a cualquier asistente que atienda a clientes. La solución es sencilla: un aviso claro y la posibilidad de pasar a hablar con una persona.</p>
+
+    <h3>Etiquetado del contenido generado con IA (desde agosto de 2026)</h3>
+    <p>El contenido sintético que pueda inducir a confusión sobre su autenticidad debe identificarse como tal. Si tu empresa genera imágenes, vídeos o textos con IA que podrían pasar por reales, entra aquí.</p>
+
+    <div class="callout">
+      <strong>El detalle que cambia la lectura:</strong> ninguna de estas tres obligaciones tiene un umbral mínimo de plantilla o facturación. Aplican igual a una empresa de tres personas que a una multinacional. Lo que sí varía es la proporcionalidad de lo que se te exige: a una pyme con un uso básico de IA le basta un plan razonable y documentado.
+    </div>
+
+    <h2 id="quien-sanciona">2. Quién puede sancionarte realmente (y el matiz que casi nadie cuenta)</h2>
+
+    <p>Aquí es donde la mayoría de artículos sobre este tema se queda a medias, y donde conviene ser preciso.</p>
+
+    <p>Has leído mil veces las cifras: multas de hasta 35 millones de euros o el 7% de la facturación mundial. Son reales y están en el artículo 99 del reglamento. Pero hay un matiz importante: <strong>para que una autoridad española imponga esas sanciones concretas hace falta una norma nacional con rango de ley que tipifique las infracciones y atribuya la competencia sancionadora</strong>. Ese proyecto de ley orgánica sigue en tramitación parlamentaria; el plazo de enmiendas se cerró a comienzos de septiembre de 2026 y el texto aún no está aprobado.</p>
+
+    <p>Conclusión apresurada que mucha gente saca: "entonces todavía no me puede pasar nada". Y es justo la conclusión equivocada.</p>
+
+    <div class="callout warn">
+      <strong>Por los mismos usos de IA te pueden sancionar hoy otras autoridades que ya tienen competencias plenas:</strong> la AEPD por la vía del RGPD (hasta 20 millones o el 4% de la facturación), la Inspección de Trabajo si el uso afecta a decisiones sobre personal, y las autoridades de consumo si afecta a los derechos de tus clientes. Un mismo sistema puede infringir varios marcos a la vez, y las sanciones no son excluyentes entre sí.
+    </div>
+
+    <p>Dicho de otro modo: el debate sobre si la AESIA puede multar hoy o dentro de unos meses es interesante para un despacho de abogados, pero irrelevante para tu decisión operativa. Si usas IA sobre datos personales sin base legal clara y sin informar, ya hay quien puede sancionarte. Y cuando el régimen nacional termine de desplegarse, llegarás con año y medio de incumplimiento acumulado en lugar de con tus deberes hechos.</p>
+
+    <h2 id="riesgo">3. Cómo clasificar tus herramientas por nivel de riesgo</h2>
+
+    <p>El reglamento no trata igual a todos los sistemas. Clasifica por el riesgo que supone su uso, no por lo sofisticada que sea la tecnología. Esta es la lectura práctica para una pyme:</p>
+
+    <svg class="article-img" viewBox="0 0 640 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pirámide de niveles de riesgo del AI Act: riesgo inaceptable prohibido, alto riesgo con requisitos estrictos, riesgo limitado con obligación de transparencia y riesgo mínimo sin obligaciones específicas">
+      <polygon points="320,20 380,80 260,80" fill="#DC4545" opacity="0.9"/>
+      <text x="398" y="58" font-family="Space Grotesk" font-size="12" font-weight="600" fill="#15151F">Riesgo inaceptable</text>
+      <text x="398" y="74" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.7">Prohibido. Sin excepciones.</text>
+
+      <polygon points="260,82 380,82 420,142 220,142" fill="#EC5C8D" opacity="0.9"/>
+      <text x="438" y="112" font-family="Space Grotesk" font-size="12" font-weight="600" fill="#15151F">Alto riesgo</text>
+      <text x="438" y="128" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.7">RRHH, crédito, biometría…</text>
+
+      <polygon points="220,144 420,144 460,204 180,204" fill="#F5A623" opacity="0.9"/>
+      <text x="478" y="174" font-family="Space Grotesk" font-size="12" font-weight="600" fill="#15151F">Riesgo limitado</text>
+      <text x="478" y="190" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.7">Chatbots, contenido generado</text>
+
+      <polygon points="180,206 460,206 500,250 140,250" fill="#14B8A6" opacity="0.9"/>
+      <text x="152" y="232" font-family="Space Grotesk" font-size="12" font-weight="600" fill="#fff">Riesgo mínimo</text>
+      <text x="152" y="246" font-family="IBM Plex Sans" font-size="9.5" fill="#fff" opacity="0.9">Automatización interna, filtros, asistentes de texto</text>
+
+      <text x="20" y="236" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.6">Aquí encaja</text>
+      <text x="20" y="250" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.6">la mayoría</text>
+      <text x="20" y="264" font-family="IBM Plex Sans" font-size="10" fill="#15151F" opacity="0.6">de pymes</text>
+    </svg>
+    <p class="img-caption">La mayoría de automatizaciones internas de una pyme caen en la base de la pirámide. El salto a "alto riesgo" suele venir por decisiones sobre personas.</p>
+
+    <table>
+      <tr><th>Uso habitual en una pyme</th><th>Nivel</th><th>Qué te toca hacer</th></tr>
+      <tr><td>Automatizar el traspaso de datos entre CRM, email y hojas de cálculo</td><td>Mínimo</td><td>Nada específico del AI Act, más allá del RGPD de siempre</td></tr>
+      <tr><td>Chatbot o respuestas automáticas a clientes</td><td>Limitado</td><td>Avisar de que es un sistema automático y ofrecer vía humana</td></tr>
+      <tr><td>Generar imágenes o textos publicables con IA</td><td>Limitado</td><td>Etiquetar el contenido que pueda confundirse con real</td></tr>
+      <tr><td>Cribar currículums o evaluar el rendimiento del equipo</td><td>Alto</td><td>Supervisión humana, documentación y evaluación de impacto</td></tr>
+      <tr><td>Scoring crediticio o de riesgo asegurador</td><td>Alto</td><td>Requisitos completos del capítulo de alto riesgo</td></tr>
+    </table>
+
+    <p>Fíjate en el patrón: la línea que separa "esto es rutina" de "esto es alto riesgo" casi nunca es la tecnología. Es <strong>si el sistema toma o condiciona decisiones sobre personas</strong>. Automatizar el envío de una factura no tiene nada que ver con automatizar a quién llamas para una entrevista.</p>
+
+    <h2 id="shadow-ai">4. El problema silencioso: la IA que ya usa tu equipo sin que lo sepas</h2>
+
+    <p>En prácticamente todos los diagnósticos de procesos que hacemos aparece lo mismo. La empresa dice que "todavía no usa IA", y media hora después descubrimos que alguien de administración pega borradores de correos en un asistente conversacional, que marketing genera imágenes de producto con una herramienta generativa, y que alguien del equipo comercial resume llamadas con una aplicación que nadie ha aprobado formalmente.</p>
+
+    <p>Eso es lo que en el sector se llama <em>shadow AI</em>: uso real de inteligencia artificial que no aparece en ningún inventario, que nadie ha evaluado y sobre el que no hay ninguna instrucción. Desde el punto de vista normativo es el peor escenario posible, porque combina dos cosas: <strong>estás obligado igual, y no tienes ni idea de sobre qué.</strong></p>
+
+    <div class="callout ok">
+      <strong>Primer paso, casi gratis:</strong> antes de contratar nada ni firmar ninguna política, siéntate con tu equipo y haz una lista honesta de qué herramientas usan de verdad para trabajar. Sin reproches, porque normalmente las usan para ir más rápido. Esa lista, con cuatro columnas — herramienta, para qué se usa, si toca datos personales y quién revisa el resultado — es literalmente el 80% del inventario que la normativa espera que tengas.
+    </div>
+
+    <h2 id="plan">5. Plan de cumplimiento realista para una pyme</h2>
+
+    <p>Nadie con veinte empleados va a montar un departamento de gobernanza de IA, y tampoco hace falta. Esta es la secuencia que tiene sentido, ordenada por relación entre esfuerzo e impacto:</p>
+
+    <ol>
+      <li><strong>Inventaría lo que ya usáis</strong>, incluido el <em>shadow AI</em>. Sin esto, todo lo demás es teoría.</li>
+      <li><strong>Clasifica cada herramienta</strong> según la tabla de arriba. En una pyme típica, casi todo cae en riesgo mínimo o limitado, y eso es una buena noticia que conviene confirmar por escrito.</li>
+      <li><strong>Marca las que tocan datos personales.</strong> Ahí se activan también las obligaciones del RGPD, que son las que hoy tienen autoridad plenamente operativa detrás.</li>
+      <li><strong>Añade los avisos de transparencia</strong> donde toque: chatbot, respuestas automáticas, contenido generado. Suele ser trabajo de una tarde.</li>
+      <li><strong>Documenta la formación</strong> que has dado al equipo, aunque sea una sesión interna de una hora con su acta y su lista de asistentes. Lo importante es que exista evidencia.</li>
+      <li><strong>Define quién supervisa qué.</strong> Un nombre y apellidos por cada sistema relevante, aunque sea la misma persona para todos.</li>
+      <li><strong>Revísalo cada seis meses</strong>, porque tanto las herramientas como la normativa se mueven.</li>
+    </ol>
+
+    <p>Con esos siete pasos, una pyme con uso ordinario de IA está en una posición razonable. No perfecta — la perfección normativa no existe — pero sí defendible si alguien pregunta.</p>
+
+    <h2 id="automatizacion">6. Por qué automatizar bien te acerca al cumplimiento, no te aleja</h2>
+
+    <p>Hay una idea equivocada rondando: que toda esta regulación es un motivo para frenar la automatización. En nuestra experiencia ocurre exactamente lo contrario, y tiene una explicación bastante lógica.</p>
+
+    <p>Un proceso manual disperso — cada persona haciendo las cosas a su manera, con las herramientas que le parecen, sin registro de nada — es <em>imposible</em> de auditar. No puedes decir quién decidió qué, ni con qué datos, ni quién lo revisó, porque esa información nunca existió.</p>
+
+    <p>Un proceso automatizado bien diseñado, en cambio, deja rastro por construcción: qué entró, qué hizo el sistema, con qué criterio, quién lo validó y cuándo. <strong>Esa trazabilidad es justamente la evidencia que la normativa te pide.</strong> No es un efecto secundario feliz: es consecuencia directa de haber ordenado el proceso antes de automatizarlo.</p>
+
+    <blockquote style="margin:26px 0;padding:20px 24px;border-left:3px solid var(--violet);background:#fff;border-radius:0 18px 18px 0;">
+      El riesgo normativo no está en usar inteligencia artificial. Está en usarla sin saber dónde, para qué y bajo la supervisión de quién.
+    </blockquote>
+
+    <p>Por eso, en PrismIA el primer paso de cualquier proyecto nunca es elegir herramienta. Es mapear el proceso real: qué ocurre hoy, quién lo toca, qué datos se mueven y dónde se toman las decisiones. Ese mapa sirve para automatizar con criterio y, de paso, es el punto de partida del inventario que la normativa te va a exigir de todas formas.</p>
+
+    <p>Si quieres profundizar en cómo funciona ese mapeo, lo explicamos en detalle en nuestro artículo sobre <a href="blog-itil-scrum-automatizacion.html" style="color:var(--violet);font-weight:600;">por qué el orden importa al automatizar</a> y en el de <a href="blog-proceso-listo-para-automatizar.html" style="color:var(--violet);font-weight:600;">cómo saber si un proceso está listo para automatizarse</a>.</p>
+
+    <h2 id="faq">7. Preguntas frecuentes</h2>
+
+    <h3>¿El AI Act se aplica a las pymes o solo a grandes empresas?</h3>
+    <p>Se aplica a cualquier empresa que desarrolle o use sistemas de IA, sin umbral mínimo de tamaño. Lo que cambia según el tamaño es la proporcionalidad de lo exigido, no la existencia de la obligación.</p>
+
+    <h3>¿Puede la AESIA multarme hoy por el AI Act?</h3>
+    <p>En el momento de escribir esta guía, la ley orgánica española que tipifica infracciones y atribuye competencias sancionadoras sigue en tramitación, por lo que el régimen sancionador nacional específico del AI Act aún no está plenamente desplegado. Pero por los mismos usos de IA sí pueden sancionarte hoy la AEPD vía RGPD, la Inspección de Trabajo o las autoridades de consumo.</p>
+
+    <h3>Tengo un chatbot en la web. ¿Qué tengo que hacer exactamente?</h3>
+    <p>Informar de forma clara al usuario de que está hablando con un sistema automático y ofrecer una vía para contactar con una persona. Es una obligación de transparencia, no una prohibición: puedes seguir usándolo con total normalidad.</p>
+
+    <h3>¿Automatizar procesos con IA me complica el cumplimiento?</h3>
+    <p>Si se hace de forma ordenada, lo simplifica. Una automatización bien documentada genera exactamente el rastro de evidencias que la normativa espera. El problema nunca es automatizar: es hacerlo sin dejar constancia de qué hace el sistema y quién lo supervisa.</p>
+
+    <h3>¿Por dónde empiezo si no he hecho nada todavía?</h3>
+    <p>Por el inventario. Sin saber qué herramientas de IA se usan realmente en tu empresa, cualquier política que escribas será papel mojado. Es también el primer paso de cualquier diagnóstico de procesos serio.</p>
+
+    <div class="cta-box">
+      <p style="margin:0;font-weight:600;">¿Sabes exactamente qué procesos de tu empresa dependen ya de la IA?</p>
+      <p style="margin:6px 0 0;font-size:0.95rem;opacity:0.8;">Nuestro diagnóstico gratuito mapea tus procesos reales, calcula cuánto te cuestan hoy y deja identificado dónde interviene la automatización. El punto de partida tanto para mejorar como para cumplir.</p>
+      <a href="index.html#diagnostico">Hacer diagnóstico gratuito</a>
+    </div>
+
+    <p class="disclaimer"><strong>Aviso:</strong> esta guía tiene carácter divulgativo y refleja el estado de la normativa en septiembre de 2026. No constituye asesoramiento jurídico. La ley orgánica española que desarrolla el AI Act seguía en tramitación parlamentaria en el momento de publicarse, por lo que plazos y cifras pueden variar. Para decisiones con efectos legales, consulta el texto oficial y a un profesional del Derecho especializado.</p>
+
+    <div class="related">
+      <p style="font-weight:600;margin:0;">Sigue leyendo</p>
+      <a href="blog-itil-scrum-automatizacion.html">ITIL, Scrum y automatización con IA: por qué el orden importa</a>
+      <a href="blog-proceso-listo-para-automatizar.html">¿Cómo saber si un proceso está listo para automatizarse?</a>
+      <a href="blog-coste-oculto-tareas-manuales.html">El coste oculto de las tareas manuales (y cómo calcularlo)</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> PrismIA — Dirigida por Mirtercast</span>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

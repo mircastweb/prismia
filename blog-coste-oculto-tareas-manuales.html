@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El coste oculto de las tareas manuales (y cómo calcularlo) — PrismIA</title>
+<meta name="description" content="Aprende a calcular en euros el coste real de una tarea manual repetitiva en tu empresa, con la fórmula exacta que usamos en nuestro diagnóstico de automatización.">
+<link rel="canonical" href="https://www.prismia.com/blog-coste-oculto-tareas-manuales.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#15151F; --navy-deep:#181826; --paper:#F6F5F2;
+    --gold:#F5A623; --gold-dark:#D98812; --teal:#14B8A6; --coral:#EC5C8D; --violet:#7C5CFC;
+    --cream-text:#F1EFFA; --line:rgba(18,32,58,0.14); --line-dark:rgba(237,233,222,0.16);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'IBM Plex Sans',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:600;letter-spacing:-0.01em;margin:0 0 0.5em;}
+  a{color:inherit;}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px;}
+  header.site{background:var(--navy-deep);border-bottom:1px solid var(--line-dark);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;max-width:1120px;margin:0 auto;}
+  .brand{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--cream-text);font-size:1.1rem;text-decoration:none;display:flex;align-items:center;gap:8px;}
+  .brand span{color:var(--gold);}
+  .brand-logo{height:48px;width:auto;display:block;}
+  nav.links{display:flex;gap:22px;}
+  nav.links a{color:var(--cream-text);text-decoration:none;font-size:0.92rem;opacity:0.85;}
+  @media (max-width:640px){ nav.links{display:none;} }
+  article{padding:64px 0 40px;}
+  .accent-bar{height:4px;background:var(--coral);border-radius:2px;width:56px;margin-bottom:22px;}
+  .eyebrow{font-size:0.85rem;opacity:0.6;margin-bottom:10px;}
+  h1.title{font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;margin-bottom:18px;}
+  p{margin:0 0 1.15em;font-size:1.02rem;}
+  .formula{
+    background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px 24px;margin:26px 0;
+    font-family:'Space Grotesk',sans-serif;font-size:1.05rem;text-align:center;color:var(--ink);
+  }
+  .example{
+    background:linear-gradient(120deg, rgba(217,162,39,0.10), rgba(216,96,122,0.10));
+    border-radius:18px;padding:22px 24px;margin:26px 0;
+  }
+  .example b{display:block;margin-bottom:8px;}
+  .cta-box{margin-top:44px;padding:26px;border-radius:18px;background:#fff;border:1px solid var(--line);}
+  .article-img{width:100%;height:auto;display:block;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 6px;margin:8px 0 30px;}
+  .cta-box a{display:inline-block;margin-top:12px;background:var(--gold);color:var(--navy-deep);font-weight:600;padding:12px 22px;border-radius:999px;text-decoration:none;}
+  footer{background:var(--navy-deep);color:var(--cream-text);padding:34px 0;margin-top:40px;}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;font-size:0.85rem;opacity:0.75;}
+  footer a{text-decoration:none;}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="nav">
+    <a href="index.html" class="brand"><img src="logo-prismia.png" alt="PrismIA" class="brand-logo"></a>
+    <nav class="links">
+      <a href="index.html">Inicio</a>
+      <a href="index.html#blog">Blog</a>
+      <a href="index.html#diagnostico">Diagnóstico</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <article class="wrap">
+    <div class="accent-bar"></div>
+    <p class="eyebrow">Artículo · Cálculo de costes</p>
+    <h1 class="title">El coste oculto de las tareas manuales (y cómo calcularlo)</h1>
+
+    <svg class="article-img" viewBox="0 0 640 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama de barras: el coste de una tarea aislada parece pequeño, pero acumulado en un año es mucho mayor">
+      <line x1="50" y1="160" x2="590" y2="160" stroke="#15151F" stroke-width="1.2" opacity="0.4"/>
+      <rect x="90" y="140" width="60" height="20" fill="#EC5C8D" opacity="0.85"/>
+      <text x="82" y="180" font-family="IBM Plex Sans" font-size="11" fill="#15151F">Una vez</text>
+      <rect x="220" y="95" width="60" height="65" fill="#EC5C8D" opacity="0.9"/>
+      <text x="192" y="180" font-family="IBM Plex Sans" font-size="11" fill="#15151F">Una semana</text>
+      <rect x="350" y="35" width="60" height="125" fill="#EC5C8D"/>
+      <text x="340" y="180" font-family="IBM Plex Sans" font-size="11" fill="#15151F">Un mes</text>
+      <rect x="480" y="18" width="60" height="142" fill="#F5A623"/>
+      <text x="470" y="14" font-family="Space Grotesk" font-size="12" fill="#15151F">Un año</text>
+    </svg>
+
+    <p>"Esto nos quita mucho tiempo" es la frase que más escuchamos en un diagnóstico. El problema es que "mucho tiempo" no convence a nadie de invertir en automatizarlo. Un número en euros, sí. Así calculamos ese número.</p>
+
+    <h2 style="font-size:1.3rem;margin-top:32px;">La fórmula</h2>
+    <div class="formula">Frecuencia semanal × duración (horas) × personas involucradas × coste/hora × 52</div>
+    <p>Cada variable es fácil de estimar aunque no tengas los datos exactos: basta con un rango razonable. Lo importante no es la precisión del decimal, es pasar de una sensación ("esto es un rollo") a una cifra con la que se puede decidir.</p>
+
+    <h2 style="font-size:1.3rem;margin-top:32px;">Un ejemplo real</h2>
+    <div class="example">
+      <b>Generar y enviar presupuestos a mano</b>
+      13 veces por semana · 20 minutos cada vez · 2 personas involucradas · 20 €/hora de coste
+      <br><br>
+      13 × 0,33h × 2 × 20€ × 52 semanas ≈ <b style="display:inline;">5.577 € al año</b>, solo en esa tarea.
+    </div>
+
+    <p>Ese número no incluye los errores que se corrigen después, ni el tiempo que se pierde retomando la tarea tras una interrupción. En la práctica, el coste real suele ser mayor que el que da la fórmula, no menor.</p>
+
+    <p>Cuando una empresa ve este cálculo aplicado a dos o tres procesos a la vez, la conversación cambia: ya no es "¿deberíamos automatizar?", es "¿cuál de estos automatizamos primero?".</p>
+
+    <div class="cta-box">
+      <p style="margin:0;font-weight:600;">Calcula el coste real de tu proceso</p>
+      <p style="margin:6px 0 0;font-size:0.95rem;opacity:0.8;">El diagnóstico gratuito hace este cálculo por ti, con tus propios números.</p>
+      <a href="index.html#diagnostico">Hacer diagnóstico gratuito</a>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year"></span> PrismIA — Dirigida por Mirtercast</span>
+    <a href="index.html">Volver al inicio</a>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
