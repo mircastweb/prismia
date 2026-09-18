@@ -3,24 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PrismIA — Automatización de procesos con IA para empresas</title>
-<meta name="description" content="Automatizamos procesos de atención al cliente, ventas, administración y reporting con IA. Diagnóstico gratuito: descubre cuánto te cuesta al año no automatizar.">
-<link rel="canonical" href="https://www.prismia.com/">
+<title>PrismIA — Automatización de Procesos y Agentes de IA para Empresas</title>
+<meta name="description" content="Automatizamos procesos con IA y construimos agentes cuando el proceso necesita criterio propio: atención al cliente, ventas, administración y reporting. Diagnóstico gratuito: descubre cuánto te cuesta al año no automatizar.">
+<link rel="canonical" href="https://getprismia.com/">
 <meta property="og:type" content="website">
-<meta property="og:title" content="PrismIA — Automatización de procesos con IA para empresas">
-<meta property="og:description" content="Diagnóstico gratuito de automatización: descubre qué proceso de tu empresa te está costando más de lo que crees y cómo automatizarlo con IA.">
-<meta property="og:url" content="https://www.prismia.com/">
+<meta property="og:title" content="PrismIA — Automatización de Procesos y Agentes de IA para Empresas">
+<meta property="og:description" content="Diagnóstico gratuito de automatización: descubre qué proceso de tu empresa te está costando más de lo que crees y cómo automatizarlo, con IA y agentes cuando hace falta.">
+<meta property="og:url" content="https://getprismia.com/">
 <meta property="og:locale" content="es_ES">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="PrismIA — Automatización de procesos con IA para empresas">
-<meta name="twitter:description" content="Diagnóstico gratuito de automatización con IA para empresas. Atención al cliente, ventas, administración y reporting.">
+<meta name="twitter:title" content="PrismIA — Automatización de Procesos y Agentes de IA para Empresas">
+<meta name="twitter:description" content="Diagnóstico gratuito: te decimos qué automatizar y dónde te conviene un agente de IA, en atención al cliente, ventas, administración y reporting.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "PrismIA",
-  "url": "https://www.prismia.com/",
-  "description": "Agencia de automatización de procesos con inteligencia artificial para empresas: atención al cliente, ventas y CRM, administración y documentos, reporting y proyectos.",
+  "url": "https://getprismia.com/",
+  "description": "Agencia de automatización de procesos con inteligencia artificial para empresas: automatizaciones y agentes de IA para atención al cliente, ventas y CRM, administración y documentos, reporting y proyectos.",
   "founder": { "@type": "Person", "name": "Miriam Terol (Mirtercast)" },
   "areaServed": "ES",
   "email": "hola@getprismia.com",
@@ -85,8 +85,19 @@
   /* ---------- DIFERENCIADORES ---------- */
   .differentiators h2{font-size:2rem;max-width:22ch;margin-bottom:40px;}
   .diff-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;}
-  @media (max-width:920px){ .diff-grid{grid-template-columns:1fr 1fr;} }
-  @media (max-width:560px){ .diff-grid{grid-template-columns:1fr;} }
+  .diff-grid .diff-card:last-child{grid-column:2 / span 2;position:relative;overflow:hidden;}
+  .diff-grid .diff-card:last-child::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg, var(--gold), var(--coral), var(--violet), var(--teal-light));
+  }
+  @media (max-width:920px){
+    .diff-grid{grid-template-columns:1fr 1fr;}
+    .diff-grid .diff-card:last-child{grid-column:1 / -1;}
+  }
+  @media (max-width:560px){
+    .diff-grid{grid-template-columns:1fr;}
+    .diff-grid .diff-card:last-child{grid-column:auto;}
+  }
   .diff-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-md);padding:26px 22px;transition:transform .2s ease, box-shadow .2s ease;}
   .diff-card:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(18,32,58,0.10);}
   .diff-num{font-family:'Space Grotesk',sans-serif;font-weight:700;color:var(--violet);font-size:0.85rem;opacity:0.7;}
@@ -621,7 +632,7 @@
     <div class="wrap">
       <div>
         <h1>Tu empresa no necesita más tecnología.<br><span class="spectrum-text">Necesita menos fricción.</span></h1>
-        <p class="lead">Diseñamos y automatizamos con IA los procesos que hoy dependen de hojas de cálculo, correos repetidos y que alguien concreto se acuerde de hacerlo. Diagnóstico primero, automatización después.</p>
+        <p class="lead">Automatizamos con IA los procesos que hoy dependen de hojas de cálculo, correos repetidos y que alguien concreto se acuerde de hacerlo — con agentes que deciden y actúan cuando el proceso lo necesita. Diagnóstico primero, automatización después.</p>
         <div class="cta-row">
           <a href="#diagnostico" class="btn btn-spectrum">Hacer diagnóstico gratuito</a>
           <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
@@ -725,6 +736,11 @@
           <h3>Entregas en fases cortas</h3>
           <p>Un primer quick win medible en semanas, no un proyecto de meses sin visibilidad hasta el final.</p>
         </div>
+        <div class="diff-card reveal">
+          <span class="diff-num">05</span>
+          <h3>Automatización o agente, según lo pida el proceso</h3>
+          <p>No todo necesita un agente ni todo necesita quedarse en un flujo fijo. Diagnosticamos qué encaja mejor en cada caso, y lo combinamos cuando hace falta.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -766,18 +782,18 @@
     <div class="wrap">
       <div class="head">
         <h2>Cuatro áreas donde automatizar cambia el día a día</h2>
-        <p>No vendemos IA genérica. Diagnosticamos primero dónde está la fricción y construimos el proceso automatizado alrededor de ella.</p>
+        <p>Sí, usamos IA: automatizamos el proceso y, cuando hace falta criterio para decidir entre varias opciones, construimos el agente que se encarga de esa parte. Siempre después de diagnosticar dónde está la fricción real.</p>
       </div>
       <div class="svc-grid">
         <div class="svc reveal">
           <svg class="node" viewBox="0 0 34 34"><circle cx="8" cy="8" r="4" fill="#F5A623"/><circle cx="26" cy="26" r="4" fill="#F5A623"/><line x1="11" y1="11" x2="23" y2="23" stroke="#F5A623" stroke-width="1.4"/></svg>
           <h3>Atención al cliente</h3>
-          <p>Respuestas automáticas a consultas repetitivas, clasificación de tickets y derivación al canal correcto sin que nadie tenga que leerlo todo primero.</p>
+          <p>Respuestas automáticas a las consultas repetitivas, y un agente que clasifica y deriva las demás al canal correcto sin que nadie tenga que leerlo todo primero.</p>
         </div>
         <div class="svc reveal">
           <svg class="node" viewBox="0 0 34 34"><circle cx="8" cy="26" r="4" fill="#EC5C8D"/><circle cx="26" cy="8" r="4" fill="#EC5C8D"/><line x1="11" y1="23" x2="23" y2="11" stroke="#EC5C8D" stroke-width="1.4"/></svg>
           <h3>Ventas y CRM</h3>
-          <p>Seguimiento automático de leads, recordatorios que no dependen de que alguien se acuerde, y propuestas que se generan solas.</p>
+          <p>Seguimiento automático de leads con recordatorios que no dependen de que alguien se acuerde, y un agente que cualifica y prioriza antes de generar la propuesta.</p>
         </div>
         <div class="svc reveal">
           <svg class="node" viewBox="0 0 34 34"><rect x="4" y="4" width="8" height="8" fill="#7C5CFC"/><rect x="22" y="22" width="8" height="8" fill="#7C5CFC"/><line x1="12" y1="12" x2="22" y2="22" stroke="#7C5CFC" stroke-width="1.4"/></svg>
@@ -818,7 +834,7 @@
         <div class="step reveal"><div class="num">1</div><h3>Descubrir</h3><p>Mapeamos cómo funciona hoy el proceso, sin dar nada por hecho.</p></div>
         <div class="step reveal"><div class="num">2</div><h3>Diagnosticar</h3><p>Cuantificamos el coste real: horas, personas y dinero.</p></div>
         <div class="step reveal"><div class="num">3</div><h3>Diseñar</h3><p>Definimos el flujo automatizado antes de tocar ninguna herramienta.</p></div>
-        <div class="step reveal"><div class="num">4</div><h3>Implementar</h3><p>Construimos la automatización con IA y la conectamos a lo que ya usáis.</p></div>
+        <div class="step reveal"><div class="num">4</div><h3>Implementar</h3><p>Construimos la automatización con IA — o el agente, cuando el proceso lo pide — y la conectamos a lo que ya usáis.</p></div>
         <div class="step reveal"><div class="num">5</div><h3>Optimizar</h3><p>Medimos resultados y ajustamos con el equipo, no en el vacío.</p></div>
       </div>
     </div>
@@ -955,7 +971,7 @@
       <div>
         <h2>Detrás de PrismIA</h2>
         <p>Soy Miriam Terol, conocida como Mirtercast, CEO y fundadora de PrismIA. Antes de automatizar nada, he pasado años coordinando proyectos IT reales: plazos, equipos, procesos que había que ordenar antes de que se pudieran mejorar. Esa forma de trabajar —diagnosticar antes de construir— es la base de cómo automatizamos aquí.</p>
-        <p>No llego a la automatización desde la moda de la IA, sino desde la gestión de proyectos. Por eso el primer paso siempre es entender el proceso, no instalar una herramienta.</p>
+        <p>No llego a la automatización desde la moda de la IA, sino desde la gestión de proyectos. Por eso el primer paso siempre es entender el proceso, no instalar una herramienta. Sí, usamos inteligencia artificial: cuando tiene sentido, construimos el agente que decide y actúa dentro de los límites que marcamos, no solo un flujo que se rompe a la primera excepción.</p>
         <ul class="cred-list">
           <li><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7l3.5 3.5L12 3" stroke="#F5A623" stroke-width="1.6" fill="none"/></svg>ITIL 4</li>
           <li><svg width="14" height="14" viewBox="0 0 14 14"><path d="M2 7l3.5 3.5L12 3" stroke="#F5A623" stroke-width="1.6" fill="none"/></svg>CAPM</li>
@@ -1036,7 +1052,7 @@
             </svg>
           </div>
           <span class="blog-date">Guía</span>
-          <h3>Automatización de atención al cliente con IA: guía completa</h3>
+          <h3>Agente de IA para atención al cliente: guía completa</h3>
           <p>Qué automatizar, qué no, y cómo calcular si te compensa según el volumen de consultas que recibís.</p>
         </a>
         <a class="blog-card reveal" href="blog-automatizacion-ventas-crm-ia.html">
@@ -1053,8 +1069,8 @@
             </svg>
           </div>
           <span class="blog-date">Guía</span>
-          <h3>Automatización de ventas y CRM con IA: deja de perder leads</h3>
-          <p>Los tres puntos donde se pierden más oportunidades comerciales y cómo cerrarlos con automatización.</p>
+          <h3>Agente de IA para ventas y CRM: deja de perder leads</h3>
+          <p>Los tres puntos donde se pierden más oportunidades comerciales y cómo cerrarlos con automatización y, cuando aporta valor, un agente que cualifica y prioriza.</p>
         </a>
         <a class="blog-card reveal" href="blog-automatizacion-documentos-administracion-ia.html">
           <div class="blog-cover cover-docs">
@@ -1172,6 +1188,10 @@
           <button class="faq-q" aria-expanded="false">¿Y si mi problema no encaja en ninguna de las cuatro áreas?<span class="faq-icon">+</span></button>
           <div class="faq-a"><p>Aun así completa el diagnóstico: la opción "no lo tengo claro" está pensada exactamente para eso, y te ayuda a acotarlo con un par de preguntas más.</p></div>
         </div>
+        <div class="faq-item reveal">
+          <button class="faq-q" aria-expanded="false">¿Qué es un agente de IA y en qué se diferencia de una automatización?<span class="faq-icon">+</span></button>
+          <div class="faq-a"><p>Una automatización clásica sigue un flujo fijo, paso a paso. Un agente de IA interpreta la situación, decide entre varias opciones y actúa dentro de los límites que le marcamos, sin que nadie tenga que prever cada caso de antemano.</p></div>
+        </div>
       </div>
     </div>
   </section>
@@ -1217,7 +1237,7 @@
       <div class="brand" style="color:var(--cream-text);">
         <img src="logo-prismia.png" alt="PrismIA" class="brand-logo">
       </div>
-      <p style="opacity:0.7;font-size:0.9rem;max-width:32ch;">Automatización de procesos con IA para empresas, con mirada de gestión de proyectos. Dirigida por Mirtercast.</p>
+      <p style="opacity:0.7;font-size:0.9rem;max-width:32ch;">Automatización de procesos y agentes de IA para empresas, con mirada de gestión de proyectos. Dirigida por Mirtercast.</p>
     </div>
     <div class="foot-links">
       <a href="#servicios">Servicios</a>
